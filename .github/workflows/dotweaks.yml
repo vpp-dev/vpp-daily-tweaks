@@ -37,7 +37,10 @@ jobs:
         echo "$SECRET_GERRIT_KEY" >secret_gerrit_key
         chmod 600 secret_ssh_key
         chmod 600 secret_gerrit_key
-        ssh-agent bash -c 'ssh-add secret_gerrit_key; GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no" git clone ssh://test4aiuortch@gerrit.fd.io:29418/vpp'
+        git clone https://github.com/FDio/vpp
+        # only get the whatever is newest in FDIO, to save the waste of b/w for everyone
+        (cd vpp; git remote fdio.origin add ssh://test4aiuortch@gerrit.fd.io:29418/vpp)
+        ssh-agent bash -c 'ssh-add secret_gerrit_key; cd vpp; GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no" git pull fdio.origin master'
         ssh-agent bash -c 'ssh-add secret_ssh_key; git clone git@github.com:vpp-dev/vpp-daily-tweaks.git'
     - name: Install vpp deps
       run: |
@@ -74,7 +77,7 @@ jobs:
          git config user.name  "Andrew Yourtchenko (ghjobs)"
          git add RUN-LOG.md || true
          git commit -a -m "Auto-update at $(date)"
-         ssh-agent bash -c 'ssh-add ../secret_ssh_key; git push origin master'
+         ssh-agent bash -c 'ssh-add ../secret_ssh_key; git push origin main'
 
 
 
