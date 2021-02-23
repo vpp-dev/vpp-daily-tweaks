@@ -1,11 +1,11 @@
 #!/bin/sh
 set -eux
 
-LOG_NAME="$(pwd)/vpp-daily-tweaks/RUN-LOG.md"
+export LOG_NAME="$(pwd)/vpp-daily-tweaks/RUN-LOG.md"
 echo "  - Started at $(date)" >"${LOG_NAME}"
 
-VPP_ROOT="$(pwd)/vpp"
-SAVE_DIR_ROOT="$(pwd)"
+export VPP_ROOT="$(pwd)/vpp"
+export SAVE_DIR_ROOT="$(pwd)"
 
 # temporary, to test the python deps updates
 cd "${VPP_ROOT}"

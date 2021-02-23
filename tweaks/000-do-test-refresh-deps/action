@@ -1,4 +1,6 @@
 #!/bin/sh
+set -eux
+
 pushd "${VPP_ROOT}"
 make test-dep test-refresh-deps
 popd
