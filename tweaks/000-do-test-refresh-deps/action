@@ -1,0 +1,5 @@
+#!/bin/sh
+pushd $(VPP_ROOT)
+make test-refresh-deps
+popd
+

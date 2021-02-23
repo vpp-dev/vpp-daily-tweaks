@@ -48,23 +48,34 @@ jobs:
         curl -Lo .git/hooks/commit-msg https://gerrit.fd.io/r/tools/hooks/commit-msg
         chmod +x .git/hooks/commit-msg
         make install-dep test-dep
-        git checkout -b ayourtch-vpp-daily-tweaks
         cd ..
         pwd
     - name: Do the needed tweaks
       run: |
         pwd
         LOGNAME="$(pwd)/vpp-daily-tweaks/RUN-LOG.md"
-        git --no-pager log HEAD~1..
-        pushd vpp
-        make test-refresh-deps
-        CHANGES="$(git diff | wc -l)"
-        if [ "$CHANGES" != "0" ]; then
-          echo "Found something to submit:"
-          git diff
-          git branch
-          git diff >>${LOGNAME}
-        fi
+        echo "Started at $(date)" >>${LOGNAME}
+        VPP_ROOT=$(pwd)/vpp"
+        pushd tweaks
+        for TWEAK_NAME in $(ls); do
+            echo "Running tweak ${TWEAK_NAME}..." >>$LOGNAME
+            # run each tweak on its own vpp branch
+            (cd ${VPP_ROOT}; git checkout -b ayourtch-${TWEAK_NAME})
+            pushd ${TWEAK_NAME}
+            bash action
+            popd
+            # see if there is anything to submit
+            pushd ${VPP_ROOT}
+            CHANGES="$(git diff | wc -l)"
+            if [ "$CHANGES" != "0" ]; then
+                echo "Found something to submit after ${TWEAK_NAME}:" >>${LOGNAME}}
+                git branch >> ${LOGNAME}
+                git diff >>${LOGNAME}
+            fi
+            # reset back to master
+            git checkout master
+            popd
+        done
         popd
         echo "Last done at $(date)" >>${LOGNAME}
 
