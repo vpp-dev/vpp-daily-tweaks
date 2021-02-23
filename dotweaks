@@ -6,6 +6,11 @@ echo "  - Started at $(date)" >"${LOG_NAME}"
 
 VPP_ROOT="$(pwd)/vpp"
 SAVE_DIR_ROOT="$(pwd)"
+
+# temporary, to test the python deps updates
+cd "${VPP_ROOT}"
+git checkout aa80f07209d85e3fa32d7c404f2d55cf97cf343f
+
 cd tweaks
 for TWEAK_NAME in [0-9]*; do
             echo "    - Running tweak ${TWEAK_NAME}..." >>"${LOG_NAME}"
