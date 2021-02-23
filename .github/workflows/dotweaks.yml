@@ -25,6 +25,7 @@ jobs:
     - name: Check-out the repositories
       env:
          SECRET_SSH_KEY: ${{ secrets.VPP_DAILYCHECK_PRIVATE_SSH_KEY }}
+         SECRET_GERRIT_KEY: ${{ secrets.FDIO_GERRIT_SECRET_KEY }}
       run: |
         sudo mkdir /run/user/$(id -u)
         sudo chown $(whoami) /run/user/$(id -u)
@@ -32,26 +33,34 @@ jobs:
         sudo apt-get install clang-format-6.0
         sudo apt-get update
         sudo apt-get install -y coreutils jq
-        git clone https://github.com/FDio/vpp
         echo "$SECRET_SSH_KEY" >secret_ssh_key
+        echo "$SECRET_GERRIT_KEY" >secret_gerrit_key
         chmod 600 secret_ssh_key
+        chmod 600 secret_gerrit_key
+        ssh-agent bash -c 'ssh-add secret_gerrit_key; git clone ssh://test4aiuortch@gerrit.fd.io:29418/vpp'
         ssh-agent bash -c 'ssh-add secret_ssh_key; git clone git@github.com:vpp-dev/vpp-daily-tweaks.git'
     - name: Install vpp deps
       run: |
         cd vpp
+        curl -Lo .git/hooks/commit-msg https://gerrit.fd.io/r/tools/hooks/commit-msg
+        chmod +x .git/hooks/commit-msg
         make install-dep test-dep
+        git checkout -b ayourtch-vpp-daily-tweaks
         cd ..
     - name: Do the needed tweaks
       run: |
+        echo "starting at $(date)" >RUN-LOG.md
         cd vpp
         make test-refresh-deps
         CHANGES="$(git diff | wc -l)"
         if [ "$CHANGES" != "0" ]; then
           echo "Found something to submit:"
           git diff
+          git branch
+          git diff >>../RUN-LOG.md
         fi
         cd ..
-        echo "Last done at $(date)" >> RUN-LOG.md
+        echo "Last done at $(date)" >>RUN-LOG.md
 
     - name: Push the updates
       env:
