@@ -51,7 +51,7 @@ jobs:
     - name: Do the needed tweaks
       run: |
         pwd
-	LOGNAME="$(pwd)/vpp-daily-tweaks/RUN-LOG.md"
+        LOGNAME="$(pwd)/vpp-daily-tweaks/RUN-LOG.md"
         git --no-pager log HEAD~1..
         pushd vpp
         make test-refresh-deps
