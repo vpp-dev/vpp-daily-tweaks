@@ -1,0 +1,67 @@
+name: Do the daily tweaks
+
+on:
+  schedule:
+  - cron:  '15 6 * * *'
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test scenario tags'
+
+
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Check-out the repositories
+      env:
+         SECRET_SSH_KEY: ${{ secrets.VPP_DAILYCHECK_PRIVATE_SSH_KEY }}
+      run: |
+        sudo mkdir /run/user/$(id -u)
+        sudo chown $(whoami) /run/user/$(id -u)
+        sudo apt-get install -y --allow-downgrades libllvm6.0=1:6.0-1ubuntu2
+        sudo apt-get install clang-format-6.0
+        sudo apt-get update
+        sudo apt-get install -y coreutils jq
+        git clone https://github.com/FDio/vpp
+        echo "$SECRET_SSH_KEY" >secret_ssh_key
+        chmod 600 secret_ssh_key
+        ssh-agent bash -c 'ssh-add secret_ssh_key; git clone git@github.com:vpp-dev/vpp-daily-tweaks.git'
+    - name: Install vpp deps
+        cd vpp
+        make install-dep
+        cd ..
+    - name: Do the needed tweaks
+      run: |
+        cd vpp
+	make test-refresh-deps
+        CHANGES="$(diff -c | wc -l)"
+        if [ "$CHANGES" != "0" ]; then
+          echo "Found something to submit:"
+          git diff
+        fi
+        cd ..
+        echo "Last done at $(date)" >> RUN-LOG.md
+
+    - name: Push the updates
+      env:
+         SECRET_SSH_KEY: ${{ secrets.VPP_DAILYCHECK_PRIVATE_SSH_KEY }}
+      run: |
+         cd vpp-daily-tweaks
+         git config user.email "ayourtch+ghjobs@gmail.com"
+         git config user.name  "Andrew Yourtchenko (ghjobs)"
+         git add RUN-LOG.md || true
+         git commit -a -m "Auto-update at $(date)"
+         ssh-agent bash -c 'ssh-add ../secret_ssh_key; git push origin master'
+
+
+
