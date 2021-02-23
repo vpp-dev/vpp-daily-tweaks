@@ -1,0 +1,28 @@
+#!/bin/sh
+set -eux
+
+echo "Started at $(date)" >>${LOG_NAME}
+VPP_ROOT="$(pwd)/vpp"
+pushd tweaks
+for TWEAK_NAME in $(ls); do
+            echo "Running tweak ${TWEAK_NAME}..." >>$LOG_NAME
+            # run each tweak on its own vpp branch
+            (cd ${VPP_ROOT}; git checkout -b ayourtch-${TWEAK_NAME})
+            pushd ${TWEAK_NAME}
+            bash action
+            popd
+            # see if there is anything to submit
+            pushd ${VPP_ROOT}
+            CHANGES="$(git diff | wc -l)"
+            if [ "$CHANGES" != "0" ]; then
+                echo "Found something to submit after ${TWEAK_NAME}:" >>${LOG_NAME}}
+                git branch >> ${LOG_NAME}
+                git diff >>${LOG_NAME}
+            fi
+            # reset back to master
+            git checkout master
+            popd
+done
+popd
+echo "Last done at $(date)" >>${LOG_NAME}
+
