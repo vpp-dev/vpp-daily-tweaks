@@ -37,6 +37,7 @@ jobs:
         chmod 600 secret_ssh_key
         ssh-agent bash -c 'ssh-add secret_ssh_key; git clone git@github.com:vpp-dev/vpp-daily-tweaks.git'
     - name: Install vpp deps
+      run: |
         cd vpp
         make install-dep
         cd ..
