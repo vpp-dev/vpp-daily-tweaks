@@ -53,8 +53,6 @@ jobs:
     - name: Do the needed tweaks
       run: |
         pwd
-        LOG_NAME="$(pwd)/vpp-daily-tweaks/RUN-LOG.md"
-        VPP_ROOT="$(pwd)/vpp"
         bash dotweaks
 
     - name: Push the updates
