@@ -43,7 +43,7 @@ jobs:
     - name: Do the needed tweaks
       run: |
         cd vpp
-	make test-refresh-deps
+        make test-refresh-deps
         CHANGES="$(diff -c | wc -l)"
         if [ "$CHANGES" != "0" ]; then
           echo "Found something to submit:"
