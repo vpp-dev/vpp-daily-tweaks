@@ -51,6 +51,7 @@ jobs:
     - name: Do the needed tweaks
       run: |
         pwd
+	LOGNAME="$(pwd)/vpp-daily-tweaks/RUN-LOG.md"
         git --no-pager log HEAD~1..
         pushd vpp
         make test-refresh-deps
@@ -59,9 +60,10 @@ jobs:
           echo "Found something to submit:"
           git diff
           git branch
+          git diff >>${LOGNAME}
         fi
         popd
-        echo "Last done at $(date)" >>RUN-LOG.md
+        echo "Last done at $(date)" >>${LOGNAME}
 
     - name: Push the updates
       env:
