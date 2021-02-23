@@ -45,7 +45,7 @@ jobs:
       run: |
         cd vpp
         make test-refresh-deps
-        CHANGES="$(diff -c | wc -l)"
+        CHANGES="$(git diff | wc -l)"
         if [ "$CHANGES" != "0" ]; then
           echo "Found something to submit:"
           git diff
