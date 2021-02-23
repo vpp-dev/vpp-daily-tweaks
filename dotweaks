@@ -2,14 +2,13 @@
 set -eux
 
 LOG_NAME="$(pwd)/vpp-daily-tweaks/RUN-LOG.md"
-
-echo "Started at $(date)" >>"${LOG_NAME}"
+echo "  - Started at $(date)" >"${LOG_NAME}"
 
 VPP_ROOT="$(pwd)/vpp"
 SAVE_DIR_ROOT="$(pwd)"
 cd tweaks
 for TWEAK_NAME in [0-9]*; do
-            echo "Running tweak ${TWEAK_NAME}..." >>"${LOG_NAME}"
+            echo "    - Running tweak ${TWEAK_NAME}..." >>"${LOG_NAME}"
             # run each tweak on its own vpp branch
             (cd "${VPP_ROOT}"; git checkout -b "ayourtch-${TWEAK_NAME}")
             SAVE_DIR_TWEAKS="$(pwd)"
@@ -21,14 +20,16 @@ for TWEAK_NAME in [0-9]*; do
             cd "${VPP_ROOT}"
             CHANGES="$(git diff | wc -l)"
             if [ "$CHANGES" != "0" ]; then
+                echo '```' >>"${LOG_NAME}"
                 echo "Found something to submit after ${TWEAK_NAME}:" >>"${LOG_NAME}"
                 git branch >> "${LOG_NAME}"
                 git diff >> "${LOG_NAME}"
+                echo '```' >>"${LOG_NAME}"
             fi
             # reset back to master
-            git checkout master
+            git checkout -f master
             cd "${SAVE_DIR_TWEAKS}"
 done
 cd "${SAVE_DIR_ROOT}"
-echo "Last done at $(date)" >>"${LOG_NAME}"
+echo "  - Last done at $(date)" >>"${LOG_NAME}"
 
