@@ -39,7 +39,7 @@ jobs:
     - name: Install vpp deps
       run: |
         cd vpp
-        make install-dep
+        make install-dep test-dep
         cd ..
     - name: Do the needed tweaks
       run: |
