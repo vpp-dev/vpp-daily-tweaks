@@ -1,5 +1,4 @@
 #!/bin/sh
-pushd $(VPP_ROOT)
-make test-refresh-deps
+pushd "${VPP_ROOT}"
+make test-dep test-refresh-deps
 popd
-

@@ -47,7 +47,7 @@ jobs:
         cd vpp
         curl -Lo .git/hooks/commit-msg https://gerrit.fd.io/r/tools/hooks/commit-msg
         chmod +x .git/hooks/commit-msg
-        make install-dep test-dep
+        make install-dep
         cd ..
         pwd
     - name: Do the needed tweaks
