@@ -4,6 +4,8 @@ set -eux
 export LOG_NAME="$(pwd)/vpp-daily-tweaks/RUN-LOG.md"
 echo "  - Started at $(date)" >"${LOG_NAME}"
 
+export SECRET_GERRIT_KEY_FILE="$(pwd)/secret_gerrit_key"
+
 export VPP_ROOT="$(pwd)/vpp"
 export SAVE_DIR_ROOT="$(pwd)"
 
@@ -82,7 +84,8 @@ for TWEAK_NAME in [0-9]*; do
                 mv "${TEMP_FILENAME}" "${COMMIT_MSG_FILENAME}"
                 git commit -a -F "${COMMIT_MSG_FILENAME}"
 
-                # FIXME: perform "git push" here
+                # Upload the new or updated change to gerrit
+                ssh-agent bash -c 'ssh-add "${SECRET_GERRIT_KEY_FILE}"; GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no" git push fdio.origin HEAD:refs/for/master'
 
                 # save the state
                 echo "${CHANGE_HASH}" >"${LAST_HASH_FILENAME}"
