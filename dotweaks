@@ -21,18 +21,44 @@ NO_CHANGE_HASH="e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
 cd vpp-daily-tweaks/tweaks
 for TWEAK_NAME in [0-9]*; do
             echo "    - Running tweak ${TWEAK_NAME}..." >>"${LOG_NAME}"
+
             # run each tweak on its own vpp branch
             BRANCH_NAME="ayourtch-${TWEAK_NAME}"
-            (cd "${VPP_ROOT}"; git branch -d "${BRANCH_NAME}" || true)
+            (cd "${VPP_ROOT}"; git branch -D "${BRANCH_NAME}" || true)
             (cd "${VPP_ROOT}"; git checkout -b "${BRANCH_NAME}")
+
+            # get the last known hash of the diff seen and the last known change ID
             SAVE_DIR_TWEAKS="$(pwd)"
             cd "${TWEAK_NAME}"
-            LAST_HASH_FILENAME="$(pwd)/last_hash"
+            LAST_HASH_FILENAME="$(pwd)/last-diff-hash"
+            CHANGE_ID_FILENAME="$(pwd)/last-change-id"
+            COMMIT_MSG_FILENAME="$(pwd)/commit-message"
+
+            # get the saved hash from previous time
             if [ -f  "${LAST_HASH_FILENAME}" ]; then
-                LAST_HASH="$(cat \""${LAST_HASH_FILENAME}"\")"
+                LAST_HASH="$(cat "${LAST_HASH_FILENAME}")"
+                echo "Last seen diff hash: ${LAST_HASH}"
             else
                 LAST_HASH="${NO_CHANGE_HASH}"
+                echo "Not seen a diff before, so assign  a 'no-diff' hash of ${LAST_HASH}"
             fi
+
+            # what is the change ID that we have been working with before...
+            if [ -f  "${CHANGE_ID_FILENAME}" ]; then
+                CHANGE_ID="$(cat "${CHANGE_ID_FILENAME}")"
+                echo "Last change id: ${CHANGE_ID}"
+
+                # check if it has been merged already and if so, pick a new one
+                if (cd "${VPP_ROOT}"; git log --grep="${CHANGE_ID}" | grep "${CHANGE_ID}"); then
+                     CHANGE_ID=$( (whoami ; hostname ; date; echo $LAST_HASH) | git hash-object --stdin)
+                     echo "Merged already, pick a new one: ${CHANGE_ID}"
+                fi
+            else
+                # no change ID submitted before, so pick a random new in case we have to
+                CHANGE_ID=$( (whoami ; hostname ; date; echo $LAST_HASH) | git hash-object --stdin)
+                echo "New change ID: ${CHANGE_ID}"
+            fi
+            TEMP_FILENAME="/tmp/change-${CHANGE_ID}"
             bash action
             cd "${SAVE_DIR_TWEAKS}"
 
@@ -40,12 +66,29 @@ for TWEAK_NAME in [0-9]*; do
             cd "${VPP_ROOT}"
             CHANGE_HASH="$(git diff | git hash-object --stdin)"
             if [ "${CHANGE_HASH}" != "${NO_CHANGE_HASH}" ] && [ "${CHANGE_HASH}" != "${LAST_HASH}" ]; then
-                # this is not an empty change *and* it is not the same change as we have last seen
+
+                # this is not an empty diff *and* it is not the same diff as we have last seen and submitted
+
+                # leave some trace in the version-controlled log
                 echo '```' >>"${LOG_NAME}"
                 echo "Found something to submit after ${TWEAK_NAME}:" >>"${LOG_NAME}"
                 git branch >> "${LOG_NAME}"
                 git diff >> "${LOG_NAME}"
                 echo '```' >>"${LOG_NAME}"
+
+                # fixup the commit message and save it into version-controlled space
+                git interpret-trailers --trailer "Change-Id: I${CHANGE_ID}" < "${COMMIT_MSG_FILENAME}" >"${TEMP_FILENAME}"
+
+                mv "${TEMP_FILENAME}" "${COMMIT_MSG_FILENAME}"
+                git commit -a -F "${COMMIT_MSG_FILENAME}"
+
+                # FIXME: perform "git push" here
+
+                # save the state
+                echo "${CHANGE_HASH}" >"${LAST_HASH_FILENAME}"
+                git add "${LAST_HASH_FILENAME}"
+                echo "${CHANGE_ID}" >"${CHANGE_ID_FILENAME}"
+                git add "${CHANGE_ID_FILENAME}"
             fi
             # reset back to master
             git checkout -f master
