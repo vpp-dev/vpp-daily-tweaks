@@ -19,6 +19,11 @@ cd "${SAVE_DIR_ROOT}"
 # e69de29bb2d1d6434b8b29ae775ad8c2e48c5391
 NO_CHANGE_HASH="e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
 
+cd "${VPP_ROOT}"
+git config user.name "GH Actions"
+git config user.email "ayourtch@icloud.com"
+cd "${SAVE_DIR_ROOT}"
+
 # Go into the "volatile" copy of tweaks, possibly we will be modifying data
 cd vpp-daily-tweaks/tweaks
 for TWEAK_NAME in [0-9]*; do
