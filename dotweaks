@@ -13,20 +13,34 @@ git checkout aa80f07209d85e3fa32d7c404f2d55cf97cf343f
 cd "${SAVE_DIR_ROOT}"
 # end of temporary
 
-cd tweaks
+# $ echo -n | git hash-object --stdin
+# e69de29bb2d1d6434b8b29ae775ad8c2e48c5391
+NO_CHANGE_HASH="e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+
+# Go into the "volatile" copy of tweaks, possibly we will be modifying data
+cd vpp-daily-tweaks/tweaks
 for TWEAK_NAME in [0-9]*; do
             echo "    - Running tweak ${TWEAK_NAME}..." >>"${LOG_NAME}"
             # run each tweak on its own vpp branch
-            (cd "${VPP_ROOT}"; git checkout -b "ayourtch-${TWEAK_NAME}")
+            BRANCH_NAME="ayourtch-${TWEAK_NAME}"
+            (cd "${VPP_ROOT}"; git branch -d "${BRANCH_NAME}" || true)
+            (cd "${VPP_ROOT}"; git checkout -b "${BRANCH_NAME}")
             SAVE_DIR_TWEAKS="$(pwd)"
             cd "${TWEAK_NAME}"
+            LAST_HASH_FILENAME="$(pwd)/last_hash"
+            if [ -f  "${LAST_HASH_FILENAME}" ]; then
+                LAST_HASH="$(cat \""${LAST_HASH_FILENAME}"\")"
+            else
+                LAST_HASH="${NO_CHANGE_HASH}"
+            fi
             bash action
             cd "${SAVE_DIR_TWEAKS}"
 
             # see if there is anything to submit
             cd "${VPP_ROOT}"
-            CHANGES="$(git diff | wc -l)"
-            if [ "$CHANGES" != "0" ]; then
+            CHANGE_HASH="$(git diff | git hash-object --stdin)"
+            if [ "${CHANGE_HASH}" != "${NO_CHANGE_HASH}" ] && [ "${CHANGE_HASH}" != "${LAST_HASH}" ]; then
+                # this is not an empty change *and* it is not the same change as we have last seen
                 echo '```' >>"${LOG_NAME}"
                 echo "Found something to submit after ${TWEAK_NAME}:" >>"${LOG_NAME}"
                 git branch >> "${LOG_NAME}"
