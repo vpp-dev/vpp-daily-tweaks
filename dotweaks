@@ -90,13 +90,15 @@ for TWEAK_NAME in [0-9]*; do
                 git commit -a -F "${COMMIT_MSG_FILENAME}"
 
                 # Upload the new or updated change to gerrit
-                ssh-agent bash -c 'ssh-add "${SECRET_GERRIT_KEY_FILE}"; GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no" git push fdio.origin HEAD:refs/for/master'
+                # ssh-agent bash -c 'ssh-add "${SECRET_GERRIT_KEY_FILE}"; GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no" git push fdio.origin HEAD:refs/for/master'
 
-                # save the state
+                # save the state of the change in the to-be-updated tweaks repo and come back to VPP repo
+                cd "${SAVE_DIR_TWEAKS}"
                 echo "${CHANGE_HASH}" >"${LAST_HASH_FILENAME}"
                 git add "${LAST_HASH_FILENAME}"
                 echo "${CHANGE_ID}" >"${CHANGE_ID_FILENAME}"
                 git add "${CHANGE_ID_FILENAME}"
+                cd "${VPP_ROOT}"
             fi
             # reset back to master
             git checkout -f master
