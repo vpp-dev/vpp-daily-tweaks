@@ -1,11 +1,11 @@
-  - Started at Tue Feb 23 19:05:07 UTC 2021
+  - Started at Wed Feb 24 06:35:52 UTC 2021
     - Running tweak 000-do-test-refresh-deps...
 ```
 Found something to submit after 000-do-test-refresh-deps:
 * ayourtch-000-do-test-refresh-deps
   master
 diff --git a/test/requirements-3.txt b/test/requirements-3.txt
-index f955f37c4..af04ba7f6 100644
+index f955f37c4..edf53a647 100644
 --- a/test/requirements-3.txt
 +++ b/test/requirements-3.txt
 @@ -8,72 +8,74 @@ alabaster==0.7.12 \
@@ -173,9 +173,9 @@ index f955f37c4..af04ba7f6 100644
 -importlib-metadata==1.6.0 \
 -    --hash=sha256:2a688cbaa90e0cc587f1df48bdc97a6eadccdcd9c35fb3f976a09e3b5016d90f \
 -    --hash=sha256:34513a8a0c4962bc66d35b359558fd8a5e10cd472d37aec5f66858addef32c1e \
-+importlib-metadata==3.5.0 \
-+    --hash=sha256:2a851a30a1fd847cedd68c7c6bfb90e765db6265852f574e9d88bb40f96924ab \
-+    --hash=sha256:31c5c29f17d064cc71bf6a005a8b25b3332787ab2e7362d5d258800ac825f471 \
++importlib-metadata==3.6.0 \
++    --hash=sha256:080d666daa2faedcc2e96c0c87d3cdb76325261c51650016784834733faa7897 \
++    --hash=sha256:144acbe6ec34f170c4a362f52c2d03e82db7d012668ba57ff8f1e668905889b0 \
      # via flake8
 -jinja2==2.11.2 \
 -    --hash=sha256:89aab215427ef59c34ad58735269eb58b1a5808103067f7bb9d5836c651b3bb0 \
@@ -415,4 +415,4 @@ index f955f37c4..af04ba7f6 100644
  
  # WARNING: The following packages were not pinned, but pip requires them to be
 ```
-  - Last done at Tue Feb 23 19:05:54 UTC 2021
+  - Last done at Wed Feb 24 06:36:32 UTC 2021
