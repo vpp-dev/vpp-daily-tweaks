@@ -1,11 +1,11 @@
-  - Started at Wed Feb 24 06:35:52 UTC 2021
+  - Started at Wed Feb 24 13:50:59 UTC 2021
     - Running tweak 000-do-test-refresh-deps...
 ```
 Found something to submit after 000-do-test-refresh-deps:
 * ayourtch-000-do-test-refresh-deps
   master
 diff --git a/test/requirements-3.txt b/test/requirements-3.txt
-index f955f37c4..edf53a647 100644
+index f955f37c4..4a5b3d4ed 100644
 --- a/test/requirements-3.txt
 +++ b/test/requirements-3.txt
 @@ -8,72 +8,74 @@ alabaster==0.7.12 \
@@ -141,7 +141,7 @@ index f955f37c4..edf53a647 100644
      # via -r requirements.txt, noiseprotocol
  deprecation==2.1.0 \
      --hash=sha256:72b3bde64e5d778694b0cf68178aed03d15e15477116add3fb773e581f9518ff \
-@@ -83,29 +85,29 @@ docutils==0.16 \
+@@ -83,29 +85,25 @@ docutils==0.16 \
      --hash=sha256:0c5b78adfbf7762415433f5515cd5c9e762339e23369dbe8000d84a4bf4ab3af \
      --hash=sha256:c2de3a60e9e7d07be26b7f2b00ca0309c207e06c100f9cc2a94931fc75a478fc \
      # via sphinx
@@ -173,10 +173,7 @@ index f955f37c4..edf53a647 100644
 -importlib-metadata==1.6.0 \
 -    --hash=sha256:2a688cbaa90e0cc587f1df48bdc97a6eadccdcd9c35fb3f976a09e3b5016d90f \
 -    --hash=sha256:34513a8a0c4962bc66d35b359558fd8a5e10cd472d37aec5f66858addef32c1e \
-+importlib-metadata==3.6.0 \
-+    --hash=sha256:080d666daa2faedcc2e96c0c87d3cdb76325261c51650016784834733faa7897 \
-+    --hash=sha256:144acbe6ec34f170c4a362f52c2d03e82db7d012668ba57ff8f1e668905889b0 \
-     # via flake8
+-    # via flake8
 -jinja2==2.11.2 \
 -    --hash=sha256:89aab215427ef59c34ad58735269eb58b1a5808103067f7bb9d5836c651b3bb0 \
 -    --hash=sha256:f0a4641d3cf955324a89c04f3d94663aa4d638abe8f733ecd3582848e1c37035 \
@@ -186,7 +183,7 @@ index f955f37c4..edf53a647 100644
      # via sphinx
  lark-parser==0.6.7 \
      --hash=sha256:062800f3823a6c733ec1d181a2089a22d1f62dbe65f90a3f6b1e6de1934b05ef \
-@@ -116,8 +118,12 @@ markupsafe==1.1.1 \
+@@ -116,8 +114,12 @@ markupsafe==1.1.1 \
      --hash=sha256:09c4b7f37d6c648cb13f9230d847adf22f8171b1ccc4d5682398e77f40309235 \
      --hash=sha256:1027c282dad077d0bae18be6794e6b6b8c91d58ed8a8d89a89d59693b9131db5 \
      --hash=sha256:13d3144e1e340870b25e7b10b98d779608c02016d5184cfb9927a9f10c689f42 \
@@ -199,7 +196,7 @@ index f955f37c4..edf53a647 100644
      --hash=sha256:43a55c2930bbc139570ac2452adf3d70cdbb3cfe5912c71cdce1c2c6bbd9c5d1 \
      --hash=sha256:46c99d2de99945ec5cb54f23c8cd5689f6d7177305ebff350a58ce5f8de1669e \
      --hash=sha256:500d4957e52ddc3351cabf489e79c91c17f6e0899158447047588650b5e69183 \
-@@ -126,24 +132,39 @@ markupsafe==1.1.1 \
+@@ -126,24 +128,39 @@ markupsafe==1.1.1 \
      --hash=sha256:62fe6c95e3ec8a7fad637b7f3d372c15ec1caa01ab47926cfdf7a75b40e0eac1 \
      --hash=sha256:6788b695d50a51edb699cb55e35487e430fa21f1ed838122d722e0ff0ac5ba15 \
      --hash=sha256:6dd73240d2af64df90aa7c4e7481e23825ea70af4b4922f8ede5b9e35f78a3b1 \
@@ -239,7 +236,7 @@ index f955f37c4..edf53a647 100644
      # via jinja2
  mccabe==0.6.1 \
      --hash=sha256:ab8a6258860da4b6677da4bd2fe5dc2c659cff31b3ee4f7f5d64e79735b80d42 \
-@@ -151,18 +172,19 @@ mccabe==0.6.1 \
+@@ -151,18 +168,19 @@ mccabe==0.6.1 \
      # via flake8
  noiseprotocol==0.3.1 \
      --hash=sha256:2e1a603a38439636cf0ffd8b3e8b12cee27d368a28b41be7dbe568b2abb23111 \
@@ -268,7 +265,7 @@ index f955f37c4..edf53a647 100644
      # via -r requirements.txt
  pexpect==4.8.0 \
      --hash=sha256:0b48a55dcb3c05f3329815901ea4fc1537514d6ba867a152b581d69ae3710937 \
-@@ -172,22 +194,39 @@ pip-tools==5.1.2 \
+@@ -172,22 +190,39 @@ pip-tools==5.1.2 \
      --hash=sha256:111ec415d3776498c8c1a8596ae9651160d17ea93303a70f25aa1f8de3d1a47b \
      --hash=sha256:a524452490f9dc888f55bef73846db2aa27041aaa72e232913d75ea732f6acc9 \
      # via -r requirements.txt
@@ -323,7 +320,7 @@ index f955f37c4..edf53a647 100644
      # via pexpect
  pycodestyle==2.6.0 \
      --hash=sha256:2295e7b2f6b5bd100585ebcb1f616591b652db8a741695b3d8f5d28bdc934367 \
-@@ -201,24 +240,24 @@ pyflakes==2.2.0 \
+@@ -201,24 +236,24 @@ pyflakes==2.2.0 \
      --hash=sha256:0d94e0e05a19e57a99444b6ddcf9a6eb2e5c68d3ca1e98e90707af8152c90a92 \
      --hash=sha256:35b2d75ee967ea93b55750aa9edbbf72813e06a66ba54438df2cfac9e3c27fc8 \
      # via flake8
@@ -359,7 +356,7 @@ index f955f37c4..edf53a647 100644
      # via sphinx
  scapy==2.4.3 ; python_version >= "2.7" or python_version >= "3.4" \
      --hash=sha256:e2f8d11f6a941c14a789ae8b236b27bd634681f1b29b5e893861e284d234f6b0 \
-@@ -226,14 +265,14 @@ scapy==2.4.3 ; python_version >= "2.7" or python_version >= "3.4" \
+@@ -226,14 +261,14 @@ scapy==2.4.3 ; python_version >= "2.7" or python_version >= "3.4" \
  six==1.15.0 \
      --hash=sha256:30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259 \
      --hash=sha256:8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced \
@@ -381,7 +378,7 @@ index f955f37c4..edf53a647 100644
      # via -r requirements.txt
  sphinx==2.4.4 \
      --hash=sha256:b4c750d546ab6d7e05bdff6ac24db8ae3e8b8253a3569b754e445110a0a12b66 \
-@@ -263,21 +302,22 @@ sphinxcontrib-serializinghtml==1.1.4 \
+@@ -263,22 +298,14 @@ sphinxcontrib-serializinghtml==1.1.4 \
      --hash=sha256:eaa0eccc86e982a9b939b2b82d12cc5d013385ba5eadcc7e4fed23f4405f77bc \
      --hash=sha256:f242a81d423f59617a8e5cf16f5d4d74e28ee9a66f9e5b637a18082991db5a9a \
      # via sphinx
@@ -396,11 +393,6 @@ index f955f37c4..edf53a647 100644
 -urllib3==1.25.9 \
 -    --hash=sha256:3018294ebefce6572a474f0604c2021e33b3fd8006ecd11d62107a5d2a963527 \
 -    --hash=sha256:88206b0eb87e6d677d424843ac5209e3fb9d0190d0ee169599165ec25e9d9115 \
-+typing-extensions==3.7.4.3 \
-+    --hash=sha256:7cb407020f00f7bfc3cb3e7881628838e69d8f3fcab2f64742a5e76b2f841918 \
-+    --hash=sha256:99d4073b617d30288f569d3f13d2bd7548c3a7e4c8de87db09a9d29bb3a4a60c \
-+    --hash=sha256:dafc7639cde7f1b6e1acc0f457842a83e722ccca8eef5270af2d74792619a89f \
-+    # via importlib-metadata
 +urllib3==1.26.3 \
 +    --hash=sha256:1b465e494e3e0d8939b50680403e3aedaa2bc434b7d5af64dfd3c958d7f5ae80 \
 +    --hash=sha256:de3eedaad74a2683334e282005cd8d7f22f4d55fa690a2a1020a416cb0a47e73 \
@@ -408,11 +400,9 @@ index f955f37c4..edf53a647 100644
 -zipp==3.1.0 \
 -    --hash=sha256:aa36550ff0c0b7ef7fa639055d797116ee891440eac1a56f378e2d3179e0320b \
 -    --hash=sha256:c599e4d75c98f6798c509911d08a22e6c021d074469042177c8c86fb92eefd96 \
-+zipp==3.4.0 \
-+    --hash=sha256:102c24ef8f171fd729d46599845e95c7ab894a4cf45f5de11a44cc7444fb1108 \
-+    --hash=sha256:ed5eee1974372595f9e416cc7bbeeb12335201d8081ca8a0743c954d4446e5cb \
-     # via importlib-metadata
+-    # via importlib-metadata
  
  # WARNING: The following packages were not pinned, but pip requires them to be
+ # pinned when the requirements file includes hashes. Consider using the --allow-unsafe flag.
 ```
-  - Last done at Wed Feb 24 06:36:32 UTC 2021
+  - Last done at Wed Feb 24 13:51:34 UTC 2021
