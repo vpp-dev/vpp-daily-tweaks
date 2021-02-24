@@ -84,7 +84,7 @@ for TWEAK_NAME in [0-9]*; do
                 echo '```' >>"${LOG_NAME}"
 
                 # fixup the commit message and save it into version-controlled space
-                git interpret-trailers --trailer "Change-Id: I${CHANGE_ID}" < "${COMMIT_MSG_FILENAME}" >"${TEMP_FILENAME}"
+                git interpret-trailers --if-exists replace --trailer "Change-Id: I${CHANGE_ID}" < "${COMMIT_MSG_FILENAME}" >"${TEMP_FILENAME}"
 
                 mv "${TEMP_FILENAME}" "${COMMIT_MSG_FILENAME}"
                 git commit -a -F "${COMMIT_MSG_FILENAME}"
