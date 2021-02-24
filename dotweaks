@@ -9,12 +9,6 @@ export SECRET_GERRIT_KEY_FILE="$(pwd)/secret_gerrit_key"
 export VPP_ROOT="$(pwd)/vpp"
 export SAVE_DIR_ROOT="$(pwd)"
 
-# temporary, to test the python deps updates
-cd "${VPP_ROOT}"
-git checkout aa80f07209d85e3fa32d7c404f2d55cf97cf343f
-cd "${SAVE_DIR_ROOT}"
-# end of temporary
-
 # $ echo -n | git hash-object --stdin
 # e69de29bb2d1d6434b8b29ae775ad8c2e48c5391
 NO_CHANGE_HASH="e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
