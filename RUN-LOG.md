@@ -1,11 +1,11 @@
-  - Started at Mon Mar 15 06:36:51 UTC 2021
+  - Started at Tue Mar 16 06:36:31 UTC 2021
     - Running tweak 000-do-test-refresh-deps...
 ```
 Found something to submit after 000-do-test-refresh-deps:
 * ayourtch-000-do-test-refresh-deps
   master
 diff --git a/test/requirements-3.txt b/test/requirements-3.txt
-index c25ac86c1..d6e0ce72c 100644
+index c25ac86c1..109baec14 100644
 --- a/test/requirements-3.txt
 +++ b/test/requirements-3.txt
 @@ -216,17 +216,17 @@ ptyprocess==0.7.0 \
@@ -32,5 +32,18 @@ index c25ac86c1..d6e0ce72c 100644
      # via sphinx
  pympler==0.9 \
      --hash=sha256:f2cbe7df622117af890249f2dea884eb702108a12d729d264b7c5983a6e06e47 \
+@@ -290,9 +290,9 @@ syslog-rfc5424-parser==0.3.2 \
+     --hash=sha256:6134ee1958da89ab7f8d32ed5370a49ddabcc99d75a950b6ec59708417f20a7a \
+     --hash=sha256:80a9239d4da404a271266000f4c5f00a183af3d03d53d19d7052c8272430bee9 \
+     # via -r requirements.txt
+-urllib3==1.26.3 \
+-    --hash=sha256:1b465e494e3e0d8939b50680403e3aedaa2bc434b7d5af64dfd3c958d7f5ae80 \
+-    --hash=sha256:de3eedaad74a2683334e282005cd8d7f22f4d55fa690a2a1020a416cb0a47e73 \
++urllib3==1.26.4 \
++    --hash=sha256:2f4da4594db7e1e110a944bb1b551fdf4e6c136ad42e4234131391e21eb5b0df \
++    --hash=sha256:e7b021f7241115872f92f43c6508082facffbd1c048e3c6e2bb9c2a157e28937 \
+     # via requests
+ 
+ # WARNING: The following packages were not pinned, but pip requires them to be
 ```
-  - Last done at Mon Mar 15 06:37:26 UTC 2021
+  - Last done at Tue Mar 16 06:37:08 UTC 2021
