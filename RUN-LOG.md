@@ -1,11 +1,11 @@
-  - Started at Wed May 19 06:45:10 UTC 2021
+  - Started at Thu May 20 06:45:22 UTC 2021
     - Running tweak 000-do-test-refresh-deps...
 ```
 Found something to submit after 000-do-test-refresh-deps:
 * ayourtch-000-do-test-refresh-deps
   master
 diff --git a/test/requirements-3.txt b/test/requirements-3.txt
-index c25ac86c1..e5bf82db9 100644
+index c25ac86c1..dad330d24 100644
 --- a/test/requirements-3.txt
 +++ b/test/requirements-3.txt
 @@ -8,9 +8,9 @@ alabaster==0.7.12 \
@@ -71,9 +71,9 @@ index c25ac86c1..e5bf82db9 100644
 -click==7.1.2 \
 -    --hash=sha256:d2b5255c7c6349bc1bd1e59e08cd12acbbd63ce649f2588755783aa94dfb6b1a \
 -    --hash=sha256:dacca89f4bfadd5de3d7489b7c8a566eee0d3676333fbb50030263894c38c0dc \
-+click==8.0.0 \
-+    --hash=sha256:7d8c289ee437bcb0316820ccee14aefcb056e58d31830ecab8e47eda6540e136 \
-+    --hash=sha256:e90e62ced43dc8105fb9a26d62f0d9340b5c8db053a814e25d95c19873ae87db \
++click==8.0.1 \
++    --hash=sha256:8c04c11192119b1ef78ea049e0a6f0463e4c48ef00a30160c704337586f3ad7a \
++    --hash=sha256:fba402a4a47334742d782209a7c79bc448911afe1149d07bdabdf480b3e2f4b6 \
      # via pip-tools
 -cryptography==3.4.6 \
 -    --hash=sha256:066bc53f052dfeda2f2d7c195cf16fb3e5ff13e1b6b7415b468514b40b381a5b \
@@ -280,4 +280,4 @@ index c25ac86c1..e5bf82db9 100644
  
  # WARNING: The following packages were not pinned, but pip requires them to be
 ```
-  - Last done at Wed May 19 06:45:38 UTC 2021
+  - Last done at Thu May 20 06:45:50 UTC 2021
