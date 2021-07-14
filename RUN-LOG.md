@@ -1,11 +1,11 @@
-  - Started at Tue Jul 13 06:38:18 UTC 2021
+  - Started at Wed Jul 14 06:38:20 UTC 2021
     - Running tweak 000-do-test-refresh-deps...
 ```
 Found something to submit after 000-do-test-refresh-deps:
 * ayourtch-000-do-test-refresh-deps
   master
 diff --git a/test/requirements-3.txt b/test/requirements-3.txt
-index a6c2bc9ab..c998ef2a8 100644
+index a6c2bc9ab..335e4523e 100644
 --- a/test/requirements-3.txt
 +++ b/test/requirements-3.txt
 @@ -8,74 +8,82 @@ alabaster==0.7.12 \
@@ -111,9 +111,12 @@ index a6c2bc9ab..c998ef2a8 100644
 +    --hash=sha256:f627688813d0a4140153ff532537fbe4afea5a3dffce1f9deb7f91f848a832b5 \
 +    --hash=sha256:fd4305f86f53dfd8cd3522269ed7fc34856a8ee3709a5e28b2836b2db9d4cd69 \
      # via cryptography
- chardet==4.0.0 \
-     --hash=sha256:0d6f53a15db4120f2b08c94f11e7d93d2c911ee118b6b30a04ec3ee8310179fa \
-     --hash=sha256:f864054d66fd9118f2e67044ac8981a54775ec5b67aed0441892edb553d21da5 \
+-chardet==4.0.0 \
+-    --hash=sha256:0d6f53a15db4120f2b08c94f11e7d93d2c911ee118b6b30a04ec3ee8310179fa \
+-    --hash=sha256:f864054d66fd9118f2e67044ac8981a54775ec5b67aed0441892edb553d21da5 \
++charset-normalizer==2.0.1 \
++    --hash=sha256:ad0da505736fc7e716a8da15bf19a985db21ac6415c26b34d2fafd3beb3d927e \
++    --hash=sha256:b68b38179052975093d71c1b5361bf64afd80484697c1f27056e50593e695ceb \
      # via requests
 -click==7.1.2 \
 -    --hash=sha256:d2b5255c7c6349bc1bd1e59e08cd12acbbd63ce649f2588755783aa94dfb6b1a \
@@ -151,7 +154,7 @@ index a6c2bc9ab..c998ef2a8 100644
      # via -r requirements.txt, noiseprotocol
  deprecation==2.1.0 \
      --hash=sha256:72b3bde64e5d778694b0cf68178aed03d15e15477116add3fb773e581f9518ff \
-@@ -84,7 +92,7 @@ deprecation==2.1.0 \
+@@ -84,79 +92,61 @@ deprecation==2.1.0 \
  docutils==0.16 \
      --hash=sha256:0c5b78adfbf7762415433f5515cd5c9e762339e23369dbe8000d84a4bf4ab3af \
      --hash=sha256:c2de3a60e9e7d07be26b7f2b00ca0309c207e06c100f9cc2a94931fc75a478fc \
@@ -160,7 +163,15 @@ index a6c2bc9ab..c998ef2a8 100644
  graphviz==0.16 \
      --hash=sha256:3cad5517c961090dfc679df6402a57de62d97703e2880a1a46147bb0dc1639eb \
      --hash=sha256:d2d25af1c199cad567ce4806f0449cb74eb30cf451fd7597251e1da099ac6e57 \
-@@ -97,66 +105,48 @@ imagesize==1.2.0 \
+     # via objgraph
+-idna==2.10 \
+-    --hash=sha256:b307872f855b18632ce0c21c5e45be78c0ea7ae4c15c828c20788b26921eb3f6 \
+-    --hash=sha256:b97d804b1e9b523befed77c48dacec60e6dcb0b5391d57af6a65a312a90648c0 \
++idna==3.2 \
++    --hash=sha256:14475042e284991034cb48e06f6851428fb14c4dc953acd9be9a5e95c7b6dd7a \
++    --hash=sha256:467fbad99067910785144ce333826c71fb0e63a425657295239737f7ecd125f3 \
+     # via requests
+ imagesize==1.2.0 \
      --hash=sha256:6965f19a6a2039c7d48bca7dba2473069ff854c36ae6f19d2cde309d998228a1 \
      --hash=sha256:b1f6b5a4eab1f73479a50fb79fcf729514a900c341d8503d62a62dbc4127a2b1 \
      # via sphinx
@@ -302,7 +313,17 @@ index a6c2bc9ab..c998ef2a8 100644
      # via sphinx
  pympler==0.9 \
      --hash=sha256:f2cbe7df622117af890249f2dea884eb702108a12d729d264b7c5983a6e06e47 \
-@@ -246,17 +236,17 @@ requests==2.25.1 \
+@@ -239,24 +229,24 @@ pytz==2021.1 \
+     --hash=sha256:83a4a90894bf38e243cf052c8b58f381bfe9a7a483f6a9cab140bc7f702ac4da \
+     --hash=sha256:eb10ce3e7736052ed3623d49975ce333bcd712c7bb19a58b9e2089d4057d0798 \
+     # via babel
+-requests==2.25.1 \
+-    --hash=sha256:27973dd4a904a4f13b263a19c866c13b92a39ed1c964655f025f3f8d3d75b804 \
+-    --hash=sha256:c210084e36a42ae6b9219e00e48287def368a26d03a048ddad7bfee44f75871e \
++requests==2.26.0 \
++    --hash=sha256:6c1246513ecd5ecd4528a0906f910e8f0f9c6b8ec72030dc9fd154dc1a6efd24 \
++    --hash=sha256:b8aa58f8cf793ffd8782d3d8cb19e66ef36f7aba4353eec859e74678b01b07a7 \
+     # via sphinx
  scapy==2.4.3 ; python_version >= "2.7" or python_version >= "3.4" \
      --hash=sha256:e2f8d11f6a941c14a789ae8b236b27bd634681f1b29b5e893861e284d234f6b0 \
      # via -r requirements.txt
@@ -364,4 +385,4 @@ index a6c2bc9ab..c998ef2a8 100644
  
  # WARNING: The following packages were not pinned, but pip requires them to be
 ```
-  - Last done at Tue Jul 13 06:38:48 UTC 2021
+  - Last done at Wed Jul 14 06:38:54 UTC 2021
