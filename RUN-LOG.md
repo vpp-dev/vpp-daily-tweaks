@@ -1,11 +1,11 @@
-  - Started at Wed Jul 14 06:38:20 UTC 2021
+  - Started at Thu Jul 15 06:36:30 UTC 2021
     - Running tweak 000-do-test-refresh-deps...
 ```
 Found something to submit after 000-do-test-refresh-deps:
 * ayourtch-000-do-test-refresh-deps
   master
 diff --git a/test/requirements-3.txt b/test/requirements-3.txt
-index a6c2bc9ab..335e4523e 100644
+index a6c2bc9ab..0a4064b3c 100644
 --- a/test/requirements-3.txt
 +++ b/test/requirements-3.txt
 @@ -8,74 +8,82 @@ alabaster==0.7.12 \
@@ -114,9 +114,9 @@ index a6c2bc9ab..335e4523e 100644
 -chardet==4.0.0 \
 -    --hash=sha256:0d6f53a15db4120f2b08c94f11e7d93d2c911ee118b6b30a04ec3ee8310179fa \
 -    --hash=sha256:f864054d66fd9118f2e67044ac8981a54775ec5b67aed0441892edb553d21da5 \
-+charset-normalizer==2.0.1 \
-+    --hash=sha256:ad0da505736fc7e716a8da15bf19a985db21ac6415c26b34d2fafd3beb3d927e \
-+    --hash=sha256:b68b38179052975093d71c1b5361bf64afd80484697c1f27056e50593e695ceb \
++charset-normalizer==2.0.2 \
++    --hash=sha256:3c502a35807c9df35697b0f44b1d65008f83071ff29c69677c7c22573bc5a45a \
++    --hash=sha256:951567c2f7433a70ab63f1be67e5ee05d3925d9423306ecb71a3b272757bcc95 \
      # via requests
 -click==7.1.2 \
 -    --hash=sha256:d2b5255c7c6349bc1bd1e59e08cd12acbbd63ce649f2588755783aa94dfb6b1a \
@@ -159,10 +159,13 @@ index a6c2bc9ab..335e4523e 100644
      --hash=sha256:0c5b78adfbf7762415433f5515cd5c9e762339e23369dbe8000d84a4bf4ab3af \
      --hash=sha256:c2de3a60e9e7d07be26b7f2b00ca0309c207e06c100f9cc2a94931fc75a478fc \
 -    # via sphinx
+-graphviz==0.16 \
+-    --hash=sha256:3cad5517c961090dfc679df6402a57de62d97703e2880a1a46147bb0dc1639eb \
+-    --hash=sha256:d2d25af1c199cad567ce4806f0449cb74eb30cf451fd7597251e1da099ac6e57 \
 +    # via sphinx, sphinx-rtd-theme
- graphviz==0.16 \
-     --hash=sha256:3cad5517c961090dfc679df6402a57de62d97703e2880a1a46147bb0dc1639eb \
-     --hash=sha256:d2d25af1c199cad567ce4806f0449cb74eb30cf451fd7597251e1da099ac6e57 \
++graphviz==0.17 \
++    --hash=sha256:5dadec94046d82adaae6019311a30e0487536d9d5a60d85451f0ba32f9fc6559 \
++    --hash=sha256:ef6e2c5deb9cdcc0c7eece1d89625fd07b0f2208ea2bcb483520907ddf8b4e12 \
      # via objgraph
 -idna==2.10 \
 -    --hash=sha256:b307872f855b18632ce0c21c5e45be78c0ea7ae4c15c828c20788b26921eb3f6 \
@@ -385,4 +388,4 @@ index a6c2bc9ab..335e4523e 100644
  
  # WARNING: The following packages were not pinned, but pip requires them to be
 ```
-  - Last done at Wed Jul 14 06:38:54 UTC 2021
+  - Last done at Thu Jul 15 06:37:04 UTC 2021
