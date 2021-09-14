@@ -1,11 +1,11 @@
-  - Started at Mon Sep 13 06:35:06 UTC 2021
+  - Started at Tue Sep 14 06:35:22 UTC 2021
     - Running tweak 000-do-test-refresh-deps...
 ```
 Found something to submit after 000-do-test-refresh-deps:
 * ayourtch-000-do-test-refresh-deps
   master
 diff --git a/test/requirements-3.txt b/test/requirements-3.txt
-index 161f09d2c..110de55e5 100644
+index 161f09d2c..b83556475 100644
 --- a/test/requirements-3.txt
 +++ b/test/requirements-3.txt
 @@ -75,21 +75,24 @@ commonmark==0.9.1 \
@@ -48,6 +48,19 @@ index 161f09d2c..110de55e5 100644
      # via
      #   -r requirements.txt
      #   noiseprotocol
+@@ -97,9 +100,9 @@ deprecation==2.1.0 \
+     --hash=sha256:72b3bde64e5d778694b0cf68178aed03d15e15477116add3fb773e581f9518ff \
+     --hash=sha256:a10811591210e1fb0e768a8c25517cabeabcba6f0bf96564f8ff45189f90b14a
+     # via -r requirements.txt
+-docutils==0.16 \
+-    --hash=sha256:0c5b78adfbf7762415433f5515cd5c9e762339e23369dbe8000d84a4bf4ab3af \
+-    --hash=sha256:c2de3a60e9e7d07be26b7f2b00ca0309c207e06c100f9cc2a94931fc75a478fc
++docutils==0.17.1 \
++    --hash=sha256:686577d2e4c32380bb50cbb22f575ed742d58168cee37e99117a854bcd88f125 \
++    --hash=sha256:cf316c8370a737a022b72b56874f6602acf974a37a9fba42ec2876387549fc61
+     # via
+     #   recommonmark
+     #   sphinx
 @@ -257,9 +260,9 @@ pyenchant==3.2.1 \
      --hash=sha256:5e206a1d6596904a922496f6c9f7d0b964b243905f401f5f2f40ea4d1f74e2cf \
      --hash=sha256:e8546c28b630f6d9f76642166656e337df2a1849cbef2b8ee198e7f64266f4ee
@@ -61,7 +74,7 @@ index 161f09d2c..110de55e5 100644
      # via sphinx
  pympler==0.9 \
      --hash=sha256:f2cbe7df622117af890249f2dea884eb702108a12d729d264b7c5983a6e06e47
-@@ -291,9 +294,9 @@ snowballstemmer==2.1.0 \
+@@ -291,17 +294,17 @@ snowballstemmer==2.1.0 \
      --hash=sha256:b51b447bea85f9968c13b650126a888aabd4cb4463fca868ec596826325dedc2 \
      --hash=sha256:e997baa4f2e9139951b6f4c631bad912dfd3c792467e2f03d7239464af90e914
      # via sphinx
@@ -74,5 +87,16 @@ index 161f09d2c..110de55e5 100644
      # via
      #   -r requirements.txt
      #   recommonmark
+     #   sphinx-rtd-theme
+     #   sphinxcontrib-spelling
+-sphinx-rtd-theme==0.5.2 \
+-    --hash=sha256:32bd3b5d13dc8186d7a42fc816a23d32e83a4827d7d9882948e7b837c232da5a \
+-    --hash=sha256:4a05bdbe8b1446d77a01e20a23ebc6777c74f43237035e76be89699308987d6f
++sphinx-rtd-theme==1.0.0 \
++    --hash=sha256:4d35a56f4508cfee4c4fb604373ede6feae2a306731d533f409ef5c3496fdbd8 \
++    --hash=sha256:eec6d497e4c2195fa0e8b2016b337532b8a699a68bcb22a512870e16925c6a5c
+     # via -r requirements.txt
+ sphinxcontrib-applehelp==1.0.2 \
+     --hash=sha256:806111e5e962be97c29ec4c1e7fe277bfd19e9652fb1a4392105b43e01af885a \
 ```
-  - Last done at Mon Sep 13 06:35:38 UTC 2021
+  - Last done at Tue Sep 14 06:35:54 UTC 2021
