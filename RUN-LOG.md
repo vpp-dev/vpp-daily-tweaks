@@ -1,13 +1,26 @@
-  - Started at Tue Sep 14 06:35:22 UTC 2021
+  - Started at Wed Sep 15 06:34:47 UTC 2021
     - Running tweak 000-do-test-refresh-deps...
 ```
 Found something to submit after 000-do-test-refresh-deps:
 * ayourtch-000-do-test-refresh-deps
   master
 diff --git a/test/requirements-3.txt b/test/requirements-3.txt
-index 161f09d2c..b83556475 100644
+index 161f09d2c..edb1337f5 100644
 --- a/test/requirements-3.txt
 +++ b/test/requirements-3.txt
+@@ -63,9 +63,9 @@ cffi==1.14.6 \
+     --hash=sha256:f627688813d0a4140153ff532537fbe4afea5a3dffce1f9deb7f91f848a832b5 \
+     --hash=sha256:fd4305f86f53dfd8cd3522269ed7fc34856a8ee3709a5e28b2836b2db9d4cd69
+     # via cryptography
+-charset-normalizer==2.0.4 \
+-    --hash=sha256:0c8911edd15d19223366a194a513099a302055a962bca2cec0f54b8b63175d8b \
+-    --hash=sha256:f23667ebe1084be45f6ae0538e4a5a865206544097e4e8bbcacf42cd02a348f3
++charset-normalizer==2.0.5 \
++    --hash=sha256:7098e7e862f6370a2a8d1a6398cd359815c45d12626267652c3f13dec58e2367 \
++    --hash=sha256:fa471a601dfea0f492e4f4fca035cd82155e65dc45c9b83bf4322dfab63755dd
+     # via requests
+ click==8.0.1 \
+     --hash=sha256:8c04c11192119b1ef78ea049e0a6f0463e4c48ef00a30160c704337586f3ad7a \
 @@ -75,21 +75,24 @@ commonmark==0.9.1 \
      --hash=sha256:452f9dc859be7f06631ddcb328b6919c67984aca654e5fefb3914d54691aed60 \
      --hash=sha256:da2f38c92590f83de410ba1a3cbceafbc74fee9def35f9251ba9a971d6d66fd9
@@ -99,4 +112,4 @@ index 161f09d2c..b83556475 100644
  sphinxcontrib-applehelp==1.0.2 \
      --hash=sha256:806111e5e962be97c29ec4c1e7fe277bfd19e9652fb1a4392105b43e01af885a \
 ```
-  - Last done at Tue Sep 14 06:35:54 UTC 2021
+  - Last done at Wed Sep 15 06:35:14 UTC 2021
