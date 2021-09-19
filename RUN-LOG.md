@@ -1,11 +1,11 @@
-  - Started at Sat Sep 18 06:33:51 UTC 2021
+  - Started at Sun Sep 19 06:33:28 UTC 2021
     - Running tweak 000-do-test-refresh-deps...
 ```
 Found something to submit after 000-do-test-refresh-deps:
 * ayourtch-000-do-test-refresh-deps
   master
 diff --git a/test/requirements-3.txt b/test/requirements-3.txt
-index 161f09d2c..d849e7b19 100644
+index 161f09d2c..44e20efef 100644
 --- a/test/requirements-3.txt
 +++ b/test/requirements-3.txt
 @@ -63,9 +63,9 @@ cffi==1.14.6 \
@@ -21,7 +21,7 @@ index 161f09d2c..d849e7b19 100644
      # via requests
  click==8.0.1 \
      --hash=sha256:8c04c11192119b1ef78ea049e0a6f0463e4c48ef00a30160c704337586f3ad7a \
-@@ -75,21 +75,24 @@ commonmark==0.9.1 \
+@@ -75,21 +75,25 @@ commonmark==0.9.1 \
      --hash=sha256:452f9dc859be7f06631ddcb328b6919c67984aca654e5fefb3914d54691aed60 \
      --hash=sha256:da2f38c92590f83de410ba1a3cbceafbc74fee9def35f9251ba9a971d6d66fd9
      # via recommonmark
@@ -48,6 +48,7 @@ index 161f09d2c..d849e7b19 100644
 +    --hash=sha256:3520667fda779eb788ea00080124875be18f2d8f0848ec00733c0ec3bb8219fc \
 +    --hash=sha256:3fa3a7ccf96e826affdf1a0a9432be74dc73423125c8f96a909e3835a5ef194a \
 +    --hash=sha256:5b0fbfae7ff7febdb74b574055c7466da334a5371f253732d7e2e7525d570498 \
++    --hash=sha256:695104a9223a7239d155d7627ad912953b540929ef97ae0c34c7b8bf30857e89 \
 +    --hash=sha256:8695456444f277af73a4877db9fc979849cd3ee74c198d04fc0776ebc3db52b9 \
 +    --hash=sha256:94cc5ed4ceaefcbe5bf38c8fba6a21fc1d365bb8fb826ea1688e3370b2e24a1c \
 +    --hash=sha256:94fff993ee9bc1b2440d3b7243d488c6a3d9724cc2b09cdb297f6a886d040ef7 \
@@ -61,7 +62,7 @@ index 161f09d2c..d849e7b19 100644
      # via
      #   -r requirements.txt
      #   noiseprotocol
-@@ -97,9 +100,9 @@ deprecation==2.1.0 \
+@@ -97,9 +101,9 @@ deprecation==2.1.0 \
      --hash=sha256:72b3bde64e5d778694b0cf68178aed03d15e15477116add3fb773e581f9518ff \
      --hash=sha256:a10811591210e1fb0e768a8c25517cabeabcba6f0bf96564f8ff45189f90b14a
      # via -r requirements.txt
@@ -74,7 +75,7 @@ index 161f09d2c..d849e7b19 100644
      # via
      #   recommonmark
      #   sphinx
-@@ -257,9 +260,9 @@ pyenchant==3.2.1 \
+@@ -257,9 +261,9 @@ pyenchant==3.2.1 \
      --hash=sha256:5e206a1d6596904a922496f6c9f7d0b964b243905f401f5f2f40ea4d1f74e2cf \
      --hash=sha256:e8546c28b630f6d9f76642166656e337df2a1849cbef2b8ee198e7f64266f4ee
      # via sphinxcontrib-spelling
@@ -87,7 +88,7 @@ index 161f09d2c..d849e7b19 100644
      # via sphinx
  pympler==0.9 \
      --hash=sha256:f2cbe7df622117af890249f2dea884eb702108a12d729d264b7c5983a6e06e47
-@@ -291,17 +294,17 @@ snowballstemmer==2.1.0 \
+@@ -291,17 +295,17 @@ snowballstemmer==2.1.0 \
      --hash=sha256:b51b447bea85f9968c13b650126a888aabd4cb4463fca868ec596826325dedc2 \
      --hash=sha256:e997baa4f2e9139951b6f4c631bad912dfd3c792467e2f03d7239464af90e914
      # via sphinx
@@ -112,4 +113,4 @@ index 161f09d2c..d849e7b19 100644
  sphinxcontrib-applehelp==1.0.2 \
      --hash=sha256:806111e5e962be97c29ec4c1e7fe277bfd19e9652fb1a4392105b43e01af885a \
 ```
-  - Last done at Sat Sep 18 06:34:24 UTC 2021
+  - Last done at Sun Sep 19 06:33:56 UTC 2021
