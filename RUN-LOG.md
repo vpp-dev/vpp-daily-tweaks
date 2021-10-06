@@ -1,11 +1,11 @@
-  - Started at Tue Oct  5 06:34:29 UTC 2021
+  - Started at Wed Oct  6 06:34:35 UTC 2021
     - Running tweak 000-do-test-refresh-deps...
 ```
 Found something to submit after 000-do-test-refresh-deps:
 * ayourtch-000-do-test-refresh-deps
   master
 diff --git a/test/requirements-3.txt b/test/requirements-3.txt
-index 161f09d2c..e1d83fe08 100644
+index 161f09d2c..e97b61a7e 100644
 --- a/test/requirements-3.txt
 +++ b/test/requirements-3.txt
 @@ -63,9 +63,9 @@ cffi==1.14.6 \
@@ -90,9 +90,20 @@ index 161f09d2c..e1d83fe08 100644
      # via sphinx
  lark-parser==0.6.7 \
      --hash=sha256:062800f3823a6c733ec1d181a2089a22d1f62dbe65f90a3f6b1e6de1934b05ef
-@@ -257,9 +263,9 @@ pyenchant==3.2.1 \
-     --hash=sha256:5e206a1d6596904a922496f6c9f7d0b964b243905f401f5f2f40ea4d1f74e2cf \
-     --hash=sha256:e8546c28b630f6d9f76642166656e337df2a1849cbef2b8ee198e7f64266f4ee
+@@ -251,15 +257,15 @@ pycparser==2.20 \
+     --hash=sha256:2d475327684562c3a96cc71adf7dc8c4f0565175cf86b6d7a404ff4c771f15f0 \
+     --hash=sha256:7582ad22678f0fcd81102833f60ef8d0e57288b6b5fb00323d101be910e35705
+     # via cffi
+-pyenchant==3.2.1 \
+-    --hash=sha256:37c79e1dab492092fe8135222b2ba404c1b79595b459af9edaeddb77a2cb89a5 \
+-    --hash=sha256:49e0b255bef9356f57eeeee1d983ffa8599c0a46727d55cddbc71ec26226ca80 \
+-    --hash=sha256:5e206a1d6596904a922496f6c9f7d0b964b243905f401f5f2f40ea4d1f74e2cf \
+-    --hash=sha256:e8546c28b630f6d9f76642166656e337df2a1849cbef2b8ee198e7f64266f4ee
++pyenchant==3.2.2 \
++    --hash=sha256:1cf830c6614362a78aab78d50eaf7c6c93831369c52e1bb64ffae1df0341e637 \
++    --hash=sha256:5a636832987eaf26efe971968f4d1b78e81f62bca2bde0a9da210c7de43c3bce \
++    --hash=sha256:5facc821ece957208a81423af7d6ec7810dad29697cb0d77aae81e4e11c8e5a6 \
++    --hash=sha256:6153f521852e23a5add923dbacfbf4bebbb8d70c4e4bad609a8e0f9faeb915d1
      # via sphinxcontrib-spelling
 -pygments==2.9.0 \
 -    --hash=sha256:a18f47b506a429f6f4b9df81bb02beab9ca21d0a5fee38ed15aef65f0545519f \
@@ -154,4 +165,4 @@ index 161f09d2c..e1d83fe08 100644
  wheel==0.37.0 \
      --hash=sha256:21014b2bd93c6d0034b6ba5d35e4eb284340e09d63c59aef6fc14b0f346146fd \
 ```
-  - Last done at Tue Oct  5 06:35:00 UTC 2021
+  - Last done at Wed Oct  6 06:35:07 UTC 2021
