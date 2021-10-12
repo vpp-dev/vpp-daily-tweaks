@@ -1,11 +1,11 @@
-  - Started at Mon Oct 11 06:35:23 UTC 2021
+  - Started at Tue Oct 12 06:34:25 UTC 2021
     - Running tweak 000-do-test-refresh-deps...
 ```
 Found something to submit after 000-do-test-refresh-deps:
 * ayourtch-000-do-test-refresh-deps
   master
 diff --git a/test/requirements-3.txt b/test/requirements-3.txt
-index 161f09d2c..73d7ee73a 100644
+index 161f09d2c..c7e5b4d6d 100644
 --- a/test/requirements-3.txt
 +++ b/test/requirements-3.txt
 @@ -12,9 +12,9 @@ babel==2.9.1 \
@@ -28,9 +28,9 @@ index 161f09d2c..73d7ee73a 100644
 -charset-normalizer==2.0.4 \
 -    --hash=sha256:0c8911edd15d19223366a194a513099a302055a962bca2cec0f54b8b63175d8b \
 -    --hash=sha256:f23667ebe1084be45f6ae0538e4a5a865206544097e4e8bbcacf42cd02a348f3
-+charset-normalizer==2.0.6 \
-+    --hash=sha256:5d209c0a931f215cee683b6445e2d77677e7e75e159f78def0db09d68fafcaa6 \
-+    --hash=sha256:5ec46d183433dcbd0ab716f2d7f29d8dee50505b3fdb40c6b985c7c4f5a3591f
++charset-normalizer==2.0.7 \
++    --hash=sha256:e019de665e2bcf9c2b64e2e5aa025fa991da8720daa3c1138cadd2fd1856aed0 \
++    --hash=sha256:f7af805c321bfa1ce6714c51f254e0d5bb5e5834039bc17db7ebe3a4cec9492b
      # via requests
 -click==8.0.1 \
 -    --hash=sha256:8c04c11192119b1ef78ea049e0a6f0463e4c48ef00a30160c704337586f3ad7a \
@@ -194,4 +194,4 @@ index 161f09d2c..73d7ee73a 100644
  wheel==0.37.0 \
      --hash=sha256:21014b2bd93c6d0034b6ba5d35e4eb284340e09d63c59aef6fc14b0f346146fd \
 ```
-  - Last done at Mon Oct 11 06:36:04 UTC 2021
+  - Last done at Tue Oct 12 06:34:58 UTC 2021
