@@ -1,11 +1,11 @@
-  - Started at Tue Oct 12 06:34:25 UTC 2021
+  - Started at Wed Oct 13 06:34:36 UTC 2021
     - Running tweak 000-do-test-refresh-deps...
 ```
 Found something to submit after 000-do-test-refresh-deps:
 * ayourtch-000-do-test-refresh-deps
   master
 diff --git a/test/requirements-3.txt b/test/requirements-3.txt
-index 161f09d2c..c7e5b4d6d 100644
+index 161f09d2c..f55fc0aa1 100644
 --- a/test/requirements-3.txt
 +++ b/test/requirements-3.txt
 @@ -12,9 +12,9 @@ babel==2.9.1 \
@@ -95,7 +95,18 @@ index 161f09d2c..c7e5b4d6d 100644
      # via
      #   recommonmark
      #   sphinx
-@@ -116,9 +122,9 @@ imagesize==1.2.0 \
+@@ -108,17 +114,17 @@ graphviz==0.17 \
+     --hash=sha256:5dadec94046d82adaae6019311a30e0487536d9d5a60d85451f0ba32f9fc6559 \
+     --hash=sha256:ef6e2c5deb9cdcc0c7eece1d89625fd07b0f2208ea2bcb483520907ddf8b4e12
+     # via objgraph
+-idna==3.2 \
+-    --hash=sha256:14475042e284991034cb48e06f6851428fb14c4dc953acd9be9a5e95c7b6dd7a \
+-    --hash=sha256:467fbad99067910785144ce333826c71fb0e63a425657295239737f7ecd125f3
++idna==3.3 \
++    --hash=sha256:84d9dd047ffa80596e0f246e2eab0b391788b0503584e8945f2368256d2735ff \
++    --hash=sha256:9d643ff0a55b762d5cdb124b8eaa99c66322e2157b69160bc32796e824360e6d
+     # via requests
+ imagesize==1.2.0 \
      --hash=sha256:6965f19a6a2039c7d48bca7dba2473069ff854c36ae6f19d2cde309d998228a1 \
      --hash=sha256:b1f6b5a4eab1f73479a50fb79fcf729514a900c341d8503d62a62dbc4127a2b1
      # via sphinx
@@ -194,4 +205,4 @@ index 161f09d2c..c7e5b4d6d 100644
  wheel==0.37.0 \
      --hash=sha256:21014b2bd93c6d0034b6ba5d35e4eb284340e09d63c59aef6fc14b0f346146fd \
 ```
-  - Last done at Tue Oct 12 06:34:58 UTC 2021
+  - Last done at Wed Oct 13 06:35:05 UTC 2021
