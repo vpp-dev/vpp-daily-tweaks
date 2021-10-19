@@ -1,11 +1,11 @@
-  - Started at Mon Oct 18 06:35:36 UTC 2021
+  - Started at Tue Oct 19 06:35:06 UTC 2021
     - Running tweak 000-do-test-refresh-deps...
 ```
 Found something to submit after 000-do-test-refresh-deps:
 * ayourtch-000-do-test-refresh-deps
   master
 diff --git a/test/requirements-3.txt b/test/requirements-3.txt
-index e5ade68f5..f86762ff6 100644
+index e5ade68f5..e6817a267 100644
 --- a/test/requirements-3.txt
 +++ b/test/requirements-3.txt
 @@ -16,64 +16,69 @@ babel==2.9.1 \
@@ -166,9 +166,9 @@ index e5ade68f5..f86762ff6 100644
 -pep517==0.11.0 \
 -    --hash=sha256:3fa6b85b9def7ba4de99fb7f96fe3f02e2d630df8aa2720a5cf3b183f087a738 \
 -    --hash=sha256:e1ba5dffa3a131387979a68ff3e391ac7d645be409216b961bc2efe6468ab0b2
-+pep517==0.11.1 \
-+    --hash=sha256:12a811fec422deae52821771113f804ddf4ae86a6ae743afd107ccef0677188d \
-+    --hash=sha256:e83754192fc0a12de38befdc19d7fe4dee2558a6f9a182adf1a8c16b489d3b4c
++pep517==0.12.0 \
++    --hash=sha256:931378d93d11b298cf511dd634cf5ea4cb249a28ef84160b3247ee9afb4e8ab0 \
++    --hash=sha256:dd884c326898e2c6e11f9e0b64940606a93eb10ea022a2e067959f3a110cf161
      # via pip-tools
  pexpect==4.8.0 \
      --hash=sha256:0b48a55dcb3c05f3329815901ea4fc1537514d6ba867a152b581d69ae3710937 \
@@ -257,4 +257,4 @@ index e5ade68f5..f86762ff6 100644
  recommonmark==0.7.1 \
      --hash=sha256:1b1db69af0231efce3fa21b94ff627ea33dee7079a01dd0a7f8482c3da148b3f \
 ```
-  - Last done at Mon Oct 18 06:36:08 UTC 2021
+  - Last done at Tue Oct 19 06:35:38 UTC 2021
