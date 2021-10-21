@@ -1,11 +1,11 @@
-  - Started at Wed Oct 20 06:35:05 UTC 2021
+  - Started at Thu Oct 21 06:35:18 UTC 2021
     - Running tweak 000-do-test-refresh-deps...
 ```
 Found something to submit after 000-do-test-refresh-deps:
 * ayourtch-000-do-test-refresh-deps
   master
 diff --git a/test/requirements-3.txt b/test/requirements-3.txt
-index e5ade68f5..c5c1160c5 100644
+index e5ade68f5..e29f773f5 100644
 --- a/test/requirements-3.txt
 +++ b/test/requirements-3.txt
 @@ -16,64 +16,69 @@ babel==2.9.1 \
@@ -153,9 +153,9 @@ index e5ade68f5..c5c1160c5 100644
 -jsonschema==4.0.1 \
 -    --hash=sha256:48f4e74f8bec0c2f75e9fcfffa264e78342873e1b57e2cfeae54864cc5e9e4dd \
 -    --hash=sha256:9938802041347f2c62cad2aef59e9a0826cd34584f3609db950efacb4dbf6518
-+jsonschema==4.1.1 \
-+    --hash=sha256:2a5ea0da054a759732ca60f19171fccf32649b1b4a5734e5988fec0087860910 \
-+    --hash=sha256:da833824a1dc3bd840a89474deb3b59dc88180757b52a6f0cc0744be959364a7
++jsonschema==4.1.2 \
++    --hash=sha256:166870c8ab27bd712a8627e0598de4685bd8d199c4d7bd7cacc3d941ba0c6ca0 \
++    --hash=sha256:5c1a282ee6b74235057421fd0f766ac5f2972f77440927f6471c9e8493632fac
      # via -r requirements.txt
  lark-parser==0.6.7 \
      --hash=sha256:062800f3823a6c733ec1d181a2089a22d1f62dbe65f90a3f6b1e6de1934b05ef
@@ -257,4 +257,4 @@ index e5ade68f5..c5c1160c5 100644
  recommonmark==0.7.1 \
      --hash=sha256:1b1db69af0231efce3fa21b94ff627ea33dee7079a01dd0a7f8482c3da148b3f \
 ```
-  - Last done at Wed Oct 20 06:35:38 UTC 2021
+  - Last done at Thu Oct 21 06:35:49 UTC 2021
