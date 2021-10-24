@@ -1,11 +1,11 @@
-  - Started at Sat Oct 23 06:34:05 UTC 2021
+  - Started at Sun Oct 24 06:34:27 UTC 2021
     - Running tweak 000-do-test-refresh-deps...
 ```
 Found something to submit after 000-do-test-refresh-deps:
 * ayourtch-000-do-test-refresh-deps
   master
 diff --git a/test/requirements-3.txt b/test/requirements-3.txt
-index e5ade68f5..d25e744ae 100644
+index e5ade68f5..8fb3b3a9f 100644
 --- a/test/requirements-3.txt
 +++ b/test/requirements-3.txt
 @@ -16,64 +16,69 @@ babel==2.9.1 \
@@ -253,6 +253,19 @@ index e5ade68f5..d25e744ae 100644
      # via -r requirements.txt
  pycparser==2.20 \
      --hash=sha256:2d475327684562c3a96cc71adf7dc8c4f0565175cf86b6d7a404ff4c771f15f0 \
+@@ -278,9 +298,9 @@ pygments==2.10.0 \
+ pympler==0.9 \
+     --hash=sha256:f2cbe7df622117af890249f2dea884eb702108a12d729d264b7c5983a6e06e47
+     # via -r requirements.txt
+-pyparsing==2.4.7 \
+-    --hash=sha256:c203ec8783bf771a155b207279b9bccb8dea02d8f0c9e5f8ead507bc3246ecc1 \
+-    --hash=sha256:ef9d7589ef3c200abe66653d3f1ab1033c3c419ae9b9bdb1240a85b024efc88b
++pyparsing==3.0.0 \
++    --hash=sha256:001cad8d467e7a9248ef9fd513f5c0d39afcbcb9a43684101853bd0ab962e479 \
++    --hash=sha256:d487599e9fb0dc36bee6b5c183c6fc5bd372ce667736f3d430ab7d842a54a35a
+     # via packaging
+ pyrsistent==0.18.0 \
+     --hash=sha256:097b96f129dd36a8c9e33594e7ebb151b1515eb52cceb08474c10a5479e799f2 \
 @@ -309,36 +329,40 @@ pytz==2021.3 \
      --hash=sha256:3672058bc3453457b622aab7a1c3bfd5ab0bdae451512f6cf25f64ed37f5b87c \
      --hash=sha256:acad2d8b20a1af07d4e4c9d2e9285c5ed9104354062f275f3fcd88dcef4f1326
@@ -325,4 +338,4 @@ index e5ade68f5..d25e744ae 100644
  recommonmark==0.7.1 \
      --hash=sha256:1b1db69af0231efce3fa21b94ff627ea33dee7079a01dd0a7f8482c3da148b3f \
 ```
-  - Last done at Sat Oct 23 06:34:40 UTC 2021
+  - Last done at Sun Oct 24 06:35:04 UTC 2021
