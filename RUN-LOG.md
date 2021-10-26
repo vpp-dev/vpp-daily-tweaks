@@ -1,11 +1,11 @@
-  - Started at Mon Oct 25 06:35:38 UTC 2021
+  - Started at Tue Oct 26 06:35:18 UTC 2021
     - Running tweak 000-do-test-refresh-deps...
 ```
 Found something to submit after 000-do-test-refresh-deps:
 * ayourtch-000-do-test-refresh-deps
   master
 diff --git a/test/requirements-3.txt b/test/requirements-3.txt
-index e5ade68f5..58bae4289 100644
+index e5ade68f5..4568ddd3e 100644
 --- a/test/requirements-3.txt
 +++ b/test/requirements-3.txt
 @@ -16,64 +16,69 @@ babel==2.9.1 \
@@ -337,5 +337,18 @@ index e5ade68f5..58bae4289 100644
      # via -r requirements.txt
  recommonmark==0.7.1 \
      --hash=sha256:1b1db69af0231efce3fa21b94ff627ea33dee7079a01dd0a7f8482c3da148b3f \
+@@ -403,9 +427,9 @@ syslog-rfc5424-parser==0.3.2 \
+     --hash=sha256:6134ee1958da89ab7f8d32ed5370a49ddabcc99d75a950b6ec59708417f20a7a \
+     --hash=sha256:80a9239d4da404a271266000f4c5f00a183af3d03d53d19d7052c8272430bee9
+     # via -r requirements.txt
+-tomli==1.2.1 \
+-    --hash=sha256:8dd0e9524d6f386271a36b41dbf6c57d8e32fd96fd22b6584679dc569d20899f \
+-    --hash=sha256:a5b75cb6f3968abb47af1b40c1819dc519ea82bcc065776a866e8d74c5ca9442
++tomli==1.2.2 \
++    --hash=sha256:c6ce0015eb38820eaf32b5db832dbc26deb3dd427bd5f6556cf0acac2c214fee \
++    --hash=sha256:f04066f68f5554911363063a30b108d2b5a5b1a010aa8b6132af78489fe3aade
+     # via pep517
+ urllib3==1.26.7 \
+     --hash=sha256:4987c65554f7a2dbf30c18fd48778ef124af6fab771a377103da0585e2336ece \
 ```
-  - Last done at Mon Oct 25 06:36:10 UTC 2021
+  - Last done at Tue Oct 26 06:35:50 UTC 2021
