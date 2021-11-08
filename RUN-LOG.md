@@ -1,13 +1,26 @@
-  - Started at Sun Nov  7 06:34:43 UTC 2021
+  - Started at Mon Nov  8 06:36:04 UTC 2021
     - Running tweak 000-do-test-refresh-deps...
 ```
 Found something to submit after 000-do-test-refresh-deps:
 * ayourtch-000-do-test-refresh-deps
   master
 diff --git a/test/requirements-3.txt b/test/requirements-3.txt
-index 785782345..428a96f26 100644
+index 785782345..7f3e8674f 100644
 --- a/test/requirements-3.txt
 +++ b/test/requirements-3.txt
+@@ -119,9 +119,9 @@ docutils==0.17.1 \
+     #   recommonmark
+     #   sphinx
+     #   sphinx-rtd-theme
+-graphviz==0.17 \
+-    --hash=sha256:5dadec94046d82adaae6019311a30e0487536d9d5a60d85451f0ba32f9fc6559 \
+-    --hash=sha256:ef6e2c5deb9cdcc0c7eece1d89625fd07b0f2208ea2bcb483520907ddf8b4e12
++graphviz==0.18 \
++    --hash=sha256:0f04e5f939d3a839b524283d590e941892c56e75e60e0f5238c431264f490022 \
++    --hash=sha256:f8bab3bf3eda40ab259bb96f786811b5dec6fd6957fa70a5b1977534e1ee2a40
+     # via objgraph
+ idna==3.3 \
+     --hash=sha256:84d9dd047ffa80596e0f246e2eab0b391788b0503584e8945f2368256d2735ff \
 @@ -131,13 +131,17 @@ imagesize==1.2.0 \
      --hash=sha256:6965f19a6a2039c7d48bca7dba2473069ff854c36ae6f19d2cde309d998228a1 \
      --hash=sha256:b1f6b5a4eab1f73479a50fb79fcf729514a900c341d8503d62a62dbc4127a2b1
@@ -54,4 +67,4 @@ index 785782345..428a96f26 100644
  # WARNING: The following packages were not pinned, but pip requires them to be
  # pinned when the requirements file includes hashes. Consider using the --allow-unsafe flag.
 ```
-  - Last done at Sun Nov  7 06:35:14 UTC 2021
+  - Last done at Mon Nov  8 06:36:39 UTC 2021
