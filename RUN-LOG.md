@@ -1,11 +1,11 @@
-  - Started at Mon Nov 15 06:36:00 UTC 2021
+  - Started at Tue Nov 16 06:33:21 UTC 2021
     - Running tweak 000-do-test-refresh-deps...
 ```
 Found something to submit after 000-do-test-refresh-deps:
 * ayourtch-000-do-test-refresh-deps
   master
 diff --git a/test/requirements-3.txt b/test/requirements-3.txt
-index 785782345..75f0a82d3 100644
+index 785782345..4866fada4 100644
 --- a/test/requirements-3.txt
 +++ b/test/requirements-3.txt
 @@ -119,25 +119,29 @@ docutils==0.17.1 \
@@ -15,9 +15,9 @@ index 785782345..75f0a82d3 100644
 -graphviz==0.17 \
 -    --hash=sha256:5dadec94046d82adaae6019311a30e0487536d9d5a60d85451f0ba32f9fc6559 \
 -    --hash=sha256:ef6e2c5deb9cdcc0c7eece1d89625fd07b0f2208ea2bcb483520907ddf8b4e12
-+graphviz==0.18.1 \
-+    --hash=sha256:6adf01cf64fb9b1c4374b733d91d4bd8bf2e86d5988d9e140c91fa304203cfb2 \
-+    --hash=sha256:bb78fbd032590dbfbbb56805b39d61fd5225d165bbf03de1e46873eec48f4b8f
++graphviz==0.18.2 \
++    --hash=sha256:b0fda999966e75e974197c2a80946e9345f730837921a1180b4fd8397bea2799 \
++    --hash=sha256:b876ad68bc7b441f05dee6b36cc338c6b95ddb4e523bb7313c9f3dfe56fc342a
      # via objgraph
  idna==3.3 \
      --hash=sha256:84d9dd047ffa80596e0f246e2eab0b391788b0503584e8945f2368256d2735ff \
@@ -88,4 +88,4 @@ index 785782345..75f0a82d3 100644
  # WARNING: The following packages were not pinned, but pip requires them to be
  # pinned when the requirements file includes hashes. Consider using the --allow-unsafe flag.
 ```
-  - Last done at Mon Nov 15 06:36:33 UTC 2021
+  - Last done at Tue Nov 16 06:33:51 UTC 2021
