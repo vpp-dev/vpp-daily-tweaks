@@ -1,11 +1,11 @@
-  - Started at Wed Nov 17 06:35:33 UTC 2021
+  - Started at Thu Nov 18 06:34:50 UTC 2021
     - Running tweak 000-do-test-refresh-deps...
 ```
 Found something to submit after 000-do-test-refresh-deps:
 * ayourtch-000-do-test-refresh-deps
   master
 diff --git a/test/requirements-3.txt b/test/requirements-3.txt
-index 785782345..2d0ea3013 100644
+index 785782345..ef0bbaaa0 100644
 --- a/test/requirements-3.txt
 +++ b/test/requirements-3.txt
 @@ -119,25 +119,29 @@ docutils==0.17.1 \
@@ -50,6 +50,19 @@ index 785782345..2d0ea3013 100644
      # via -r requirements.txt
  lark-parser==0.6.7 \
      --hash=sha256:062800f3823a6c733ec1d181a2089a22d1f62dbe65f90a3f6b1e6de1934b05ef
+@@ -221,9 +225,9 @@ objgraph==3.5.0 \
+     --hash=sha256:4752ca5bcc0e0512e41b8cc4d2780ac2fd3b3eabd03b7e950a5594c06203dfc4 \
+     --hash=sha256:deb821bc51a88ff103893aeeee2a8965eb0f719af2a363f49d63d894938b50b6
+     # via -r requirements.txt
+-packaging==21.2 \
+-    --hash=sha256:096d689d78ca690e4cd8a89568ba06d07ca097e3306a4381635073ca91479966 \
+-    --hash=sha256:14317396d1e8cdb122989b916fa2c7e9ca8e2be9e8060a6eff75b6b7b4d8a7e0
++packaging==21.3 \
++    --hash=sha256:dd47c42927d89ab911e606518907cc2d3a1f38bbd026385970643f9c5b8ecfeb \
++    --hash=sha256:ef103e05f519cdc783ae24ea4e2e0f508a9c99b2d4969652eed6a2e1ea5bd522
+     # via
+     #   deprecation
+     #   sphinx
 @@ -281,9 +285,9 @@ pycodestyle==2.8.0 \
      --hash=sha256:720f8b39dde8b293825e7ff02c475f3077124006db4f440dcbc9a20b76548a20 \
      --hash=sha256:eddd5847ef438ea1c7870ca7eb78a9d47ce0cdb4851a5523949f2601d0cbbe7f
@@ -63,6 +76,19 @@ index 785782345..2d0ea3013 100644
      # via cffi
  pyenchant==3.2.2 \
      --hash=sha256:1cf830c6614362a78aab78d50eaf7c6c93831369c52e1bb64ffae1df0341e637 \
+@@ -298,9 +302,9 @@ pygments==2.10.0 \
+ pympler==0.9 \
+     --hash=sha256:f2cbe7df622117af890249f2dea884eb702108a12d729d264b7c5983a6e06e47
+     # via -r requirements.txt
+-pyparsing==2.4.7 \
+-    --hash=sha256:c203ec8783bf771a155b207279b9bccb8dea02d8f0c9e5f8ead507bc3246ecc1 \
+-    --hash=sha256:ef9d7589ef3c200abe66653d3f1ab1033c3c419ae9b9bdb1240a85b024efc88b
++pyparsing==3.0.6 \
++    --hash=sha256:04ff808a5b90911829c55c4e26f75fa5ca8a2f5f36aa3a51f68e27033341d3e4 \
++    --hash=sha256:d9bdec0013ef1eb5a84ab39a3b3868911598afa494f5faa038647101504e2b81
+     # via packaging
+ pyrsistent==0.18.0 \
+     --hash=sha256:097b96f129dd36a8c9e33594e7ebb151b1515eb52cceb08474c10a5479e799f2 \
 @@ -379,13 +383,13 @@ six==1.16.0 \
      --hash=sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926 \
      --hash=sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254
@@ -95,4 +121,4 @@ index 785782345..2d0ea3013 100644
  # WARNING: The following packages were not pinned, but pip requires them to be
  # pinned when the requirements file includes hashes. Consider using the --allow-unsafe flag.
 ```
-  - Last done at Wed Nov 17 06:36:04 UTC 2021
+  - Last done at Thu Nov 18 06:35:29 UTC 2021
