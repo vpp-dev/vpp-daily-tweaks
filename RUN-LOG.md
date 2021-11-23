@@ -1,14 +1,14 @@
-  - Started at Mon Nov 22 06:35:59 UTC 2021
+  - Started at Tue Nov 23 06:35:38 UTC 2021
     - Running tweak 000-do-test-refresh-deps...
 ```
 Found something to submit after 000-do-test-refresh-deps:
 * ayourtch-000-do-test-refresh-deps
   master
 diff --git a/test/requirements-3.txt b/test/requirements-3.txt
-index 785782345..07ffa3ea6 100644
+index 785782345..62b893261 100644
 --- a/test/requirements-3.txt
 +++ b/test/requirements-3.txt
-@@ -84,27 +84,27 @@ commonmark==0.9.1 \
+@@ -84,27 +84,28 @@ commonmark==0.9.1 \
      --hash=sha256:452f9dc859be7f06631ddcb328b6919c67984aca654e5fefb3914d54691aed60 \
      --hash=sha256:da2f38c92590f83de410ba1a3cbceafbc74fee9def35f9251ba9a971d6d66fd9
      # via recommonmark
@@ -45,6 +45,7 @@ index 785782345..07ffa3ea6 100644
 +    --hash=sha256:684993ff6f67000a56454b41bdc7e015429732d65a52d06385b6e9de6181c71e \
 +    --hash=sha256:6fbbbb8aab4053fa018984bb0e95a16faeb051dd8cca15add2a27e267ba02b58 \
 +    --hash=sha256:8982c19bb90a4fa2aad3d635c6d71814e38b643649b4000a8419f8691f20ac44 \
++    --hash=sha256:9511416e85e449fe1de73f7f99b21b3aa04fba4c4d335d30c486ba3756e3a2a6 \
 +    --hash=sha256:97199a13b772e74cdcdb03760c32109c808aff7cd49c29e9cf4b7754bb725d1d \
 +    --hash=sha256:a776bae1629c8d7198396fd93ec0265f8dd2341c553dc32b976168aaf0e6a636 \
 +    --hash=sha256:aa94d617a4cd4cdf4af9b5af65100c036bce22280ebb15d8b5262e8273ebc6ba \
@@ -57,7 +58,7 @@ index 785782345..07ffa3ea6 100644
      # via
      #   -r requirements.txt
      #   noiseprotocol
-@@ -119,25 +119,29 @@ docutils==0.17.1 \
+@@ -119,25 +120,29 @@ docutils==0.17.1 \
      #   recommonmark
      #   sphinx
      #   sphinx-rtd-theme
@@ -99,7 +100,7 @@ index 785782345..07ffa3ea6 100644
      # via -r requirements.txt
  lark-parser==0.6.7 \
      --hash=sha256:062800f3823a6c733ec1d181a2089a22d1f62dbe65f90a3f6b1e6de1934b05ef
-@@ -221,9 +225,9 @@ objgraph==3.5.0 \
+@@ -221,9 +226,9 @@ objgraph==3.5.0 \
      --hash=sha256:4752ca5bcc0e0512e41b8cc4d2780ac2fd3b3eabd03b7e950a5594c06203dfc4 \
      --hash=sha256:deb821bc51a88ff103893aeeee2a8965eb0f719af2a363f49d63d894938b50b6
      # via -r requirements.txt
@@ -112,7 +113,7 @@ index 785782345..07ffa3ea6 100644
      # via
      #   deprecation
      #   sphinx
-@@ -281,9 +285,9 @@ pycodestyle==2.8.0 \
+@@ -281,9 +286,9 @@ pycodestyle==2.8.0 \
      --hash=sha256:720f8b39dde8b293825e7ff02c475f3077124006db4f440dcbc9a20b76548a20 \
      --hash=sha256:eddd5847ef438ea1c7870ca7eb78a9d47ce0cdb4851a5523949f2601d0cbbe7f
      # via -r requirements.txt
@@ -125,7 +126,7 @@ index 785782345..07ffa3ea6 100644
      # via cffi
  pyenchant==3.2.2 \
      --hash=sha256:1cf830c6614362a78aab78d50eaf7c6c93831369c52e1bb64ffae1df0341e637 \
-@@ -298,9 +302,9 @@ pygments==2.10.0 \
+@@ -298,9 +303,9 @@ pygments==2.10.0 \
  pympler==0.9 \
      --hash=sha256:f2cbe7df622117af890249f2dea884eb702108a12d729d264b7c5983a6e06e47
      # via -r requirements.txt
@@ -138,7 +139,7 @@ index 785782345..07ffa3ea6 100644
      # via packaging
  pyrsistent==0.18.0 \
      --hash=sha256:097b96f129dd36a8c9e33594e7ebb151b1515eb52cceb08474c10a5479e799f2 \
-@@ -379,13 +383,13 @@ six==1.16.0 \
+@@ -379,13 +384,13 @@ six==1.16.0 \
      --hash=sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926 \
      --hash=sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254
      # via -r requirements.txt
@@ -158,7 +159,7 @@ index 785782345..07ffa3ea6 100644
      # via
      #   -r requirements.txt
      #   recommonmark
-@@ -439,6 +443,10 @@ wheel==0.37.0 \
+@@ -439,6 +444,10 @@ wheel==0.37.0 \
      --hash=sha256:21014b2bd93c6d0034b6ba5d35e4eb284340e09d63c59aef6fc14b0f346146fd \
      --hash=sha256:e2ef7239991699e3355d54f8e968a21bb940a1dbf34a4d226741e64462516fad
      # via pip-tools
@@ -170,4 +171,4 @@ index 785782345..07ffa3ea6 100644
  # WARNING: The following packages were not pinned, but pip requires them to be
  # pinned when the requirements file includes hashes. Consider using the --allow-unsafe flag.
 ```
-  - Last done at Mon Nov 22 06:36:29 UTC 2021
+  - Last done at Tue Nov 23 06:36:12 UTC 2021
