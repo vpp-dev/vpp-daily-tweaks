@@ -1,11 +1,11 @@
-  - Started at Sat Dec  4 06:35:38 UTC 2021
+  - Started at Sun Dec  5 06:35:20 UTC 2021
     - Running tweak 000-do-test-refresh-deps...
 ```
 Found something to submit after 000-do-test-refresh-deps:
 * ayourtch-000-do-test-refresh-deps
   master
 diff --git a/test/requirements-3.txt b/test/requirements-3.txt
-index 785782345..d92de1650 100644
+index 785782345..ec304b635 100644
 --- a/test/requirements-3.txt
 +++ b/test/requirements-3.txt
 @@ -72,9 +72,9 @@ cffi==1.15.0 \
@@ -172,6 +172,19 @@ index 785782345..d92de1650 100644
      # via
      #   -r requirements.txt
      #   recommonmark
+@@ -419,9 +424,9 @@ sphinxcontrib-serializinghtml==1.1.5 \
+     --hash=sha256:352a9a00ae864471d3a7ead8d7d79f5fc0b57e8b3f95e9867eb9eb28999b92fd \
+     --hash=sha256:aa5f6de5dfdf809ef505c4895e51ef5c9eac17d0f287933eb49ec495280b6952
+     # via sphinx
+-sphinxcontrib-spelling==7.2.1 \
+-    --hash=sha256:f09c1ddadf4f09ddbaef3ee210e6a18123c94fb5db5e11dfd5012208f73c35e0 \
+-    --hash=sha256:f2578653014931b32c8c30d1a9930d998ae053b0d8b7adfbea0eb95a63e7a737
++sphinxcontrib-spelling==7.3.0 \
++    --hash=sha256:1af647e1d9fc7df0e08e327addbd69613bf751cb90aba0d531e69aee1e636133 \
++    --hash=sha256:a11799366f02fbd3390abf6aa2d4f0fe34df9be6e5ac0b1c8139dbd6c7fb0c99
+     # via -r requirements.txt
+ syslog-rfc5424-parser==0.3.2 \
+     --hash=sha256:6134ee1958da89ab7f8d32ed5370a49ddabcc99d75a950b6ec59708417f20a7a \
 @@ -439,6 +444,10 @@ wheel==0.37.0 \
      --hash=sha256:21014b2bd93c6d0034b6ba5d35e4eb284340e09d63c59aef6fc14b0f346146fd \
      --hash=sha256:e2ef7239991699e3355d54f8e968a21bb940a1dbf34a4d226741e64462516fad
@@ -184,4 +197,4 @@ index 785782345..d92de1650 100644
  # WARNING: The following packages were not pinned, but pip requires them to be
  # pinned when the requirements file includes hashes. Consider using the --allow-unsafe flag.
 ```
-  - Last done at Sat Dec  4 06:36:09 UTC 2021
+  - Last done at Sun Dec  5 06:35:56 UTC 2021
