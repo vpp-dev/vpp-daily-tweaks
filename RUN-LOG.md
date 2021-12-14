@@ -1,11 +1,11 @@
-  - Started at Mon Dec 13 06:36:25 UTC 2021
+  - Started at Tue Dec 14 06:35:21 UTC 2021
     - Running tweak 000-do-test-refresh-deps...
 ```
 Found something to submit after 000-do-test-refresh-deps:
 * ayourtch-000-do-test-refresh-deps
   master
 diff --git a/test/requirements-3.txt b/test/requirements-3.txt
-index 785782345..0f401aac1 100644
+index 785782345..1cf6817cc 100644
 --- a/test/requirements-3.txt
 +++ b/test/requirements-3.txt
 @@ -72,9 +72,9 @@ cffi==1.15.0 \
@@ -172,7 +172,7 @@ index 785782345..0f401aac1 100644
      # via
      #   -r requirements.txt
      #   recommonmark
-@@ -419,9 +424,9 @@ sphinxcontrib-serializinghtml==1.1.5 \
+@@ -419,17 +424,17 @@ sphinxcontrib-serializinghtml==1.1.5 \
      --hash=sha256:352a9a00ae864471d3a7ead8d7d79f5fc0b57e8b3f95e9867eb9eb28999b92fd \
      --hash=sha256:aa5f6de5dfdf809ef505c4895e51ef5c9eac17d0f287933eb49ec495280b6952
      # via sphinx
@@ -185,6 +185,17 @@ index 785782345..0f401aac1 100644
      # via -r requirements.txt
  syslog-rfc5424-parser==0.3.2 \
      --hash=sha256:6134ee1958da89ab7f8d32ed5370a49ddabcc99d75a950b6ec59708417f20a7a \
+     --hash=sha256:80a9239d4da404a271266000f4c5f00a183af3d03d53d19d7052c8272430bee9
+     # via -r requirements.txt
+-tomli==1.2.2 \
+-    --hash=sha256:c6ce0015eb38820eaf32b5db832dbc26deb3dd427bd5f6556cf0acac2c214fee \
+-    --hash=sha256:f04066f68f5554911363063a30b108d2b5a5b1a010aa8b6132af78489fe3aade
++tomli==2.0.0 \
++    --hash=sha256:b5bde28da1fed24b9bd1d4d2b8cba62300bfb4ec9a6187a957e8ddb9434c5224 \
++    --hash=sha256:c292c34f58502a1eb2bbb9f5bbc9a5ebc37bee10ffb8c2d6bbdfa8eb13cc14e1
+     # via pep517
+ urllib3==1.26.7 \
+     --hash=sha256:4987c65554f7a2dbf30c18fd48778ef124af6fab771a377103da0585e2336ece \
 @@ -439,6 +444,10 @@ wheel==0.37.0 \
      --hash=sha256:21014b2bd93c6d0034b6ba5d35e4eb284340e09d63c59aef6fc14b0f346146fd \
      --hash=sha256:e2ef7239991699e3355d54f8e968a21bb940a1dbf34a4d226741e64462516fad
@@ -197,4 +208,4 @@ index 785782345..0f401aac1 100644
  # WARNING: The following packages were not pinned, but pip requires them to be
  # pinned when the requirements file includes hashes. Consider using the --allow-unsafe flag.
 ```
-  - Last done at Mon Dec 13 06:36:57 UTC 2021
+  - Last done at Tue Dec 14 06:35:52 UTC 2021
