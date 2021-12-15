@@ -1,11 +1,11 @@
-  - Started at Tue Dec 14 06:35:21 UTC 2021
+  - Started at Wed Dec 15 06:35:12 UTC 2021
     - Running tweak 000-do-test-refresh-deps...
 ```
 Found something to submit after 000-do-test-refresh-deps:
 * ayourtch-000-do-test-refresh-deps
   master
 diff --git a/test/requirements-3.txt b/test/requirements-3.txt
-index 785782345..1cf6817cc 100644
+index 785782345..7fc82cc7d 100644
 --- a/test/requirements-3.txt
 +++ b/test/requirements-3.txt
 @@ -72,9 +72,9 @@ cffi==1.15.0 \
@@ -21,7 +21,7 @@ index 785782345..1cf6817cc 100644
      # via requests
  click==8.0.3 \
      --hash=sha256:353f466495adaeb40b6b5f592f9f91cb22372351c84caeb068132442a4518ef3 \
-@@ -84,27 +84,28 @@ commonmark==0.9.1 \
+@@ -84,27 +84,27 @@ commonmark==0.9.1 \
      --hash=sha256:452f9dc859be7f06631ddcb328b6919c67984aca654e5fefb3914d54691aed60 \
      --hash=sha256:da2f38c92590f83de410ba1a3cbceafbc74fee9def35f9251ba9a971d6d66fd9
      # via recommonmark
@@ -46,32 +46,31 @@ index 785782345..1cf6817cc 100644
 -    --hash=sha256:d99915d6ab265c22873f1b4d6ea5ef462ef797b4140be4c9d8b179915e0985c6 \
 -    --hash=sha256:eb80e8a1f91e4b7ef8b33041591e6d89b2b8e122d787e87eeb2b08da71bb16ad \
 -    --hash=sha256:ebeddd119f526bcf323a89f853afb12e225902a24d29b55fe18dd6fcb2838a76
-+cryptography==36.0.0 \
-+    --hash=sha256:2049f8b87f449fc6190350de443ee0c1dd631f2ce4fa99efad2984de81031681 \
-+    --hash=sha256:231c4a69b11f6af79c1495a0e5a85909686ea8db946935224b7825cfb53827ed \
-+    --hash=sha256:24469d9d33217ffd0ce4582dfcf2a76671af115663a95328f63c99ec7ece61a4 \
-+    --hash=sha256:2deab5ec05d83ddcf9b0916319674d3dae88b0e7ee18f8962642d3cde0496568 \
-+    --hash=sha256:494106e9cd945c2cadfce5374fa44c94cfadf01d4566a3b13bb487d2e6c7959e \
-+    --hash=sha256:4c702855cd3174666ef0d2d13dcc879090aa9c6c38f5578896407a7028f75b9f \
-+    --hash=sha256:52f769ecb4ef39865719aedc67b4b7eae167bafa48dbc2a26dd36fa56460507f \
-+    --hash=sha256:5c49c9e8fb26a567a2b3fa0343c89f5d325447956cc2fc7231c943b29a973712 \
-+    --hash=sha256:684993ff6f67000a56454b41bdc7e015429732d65a52d06385b6e9de6181c71e \
-+    --hash=sha256:6fbbbb8aab4053fa018984bb0e95a16faeb051dd8cca15add2a27e267ba02b58 \
-+    --hash=sha256:8982c19bb90a4fa2aad3d635c6d71814e38b643649b4000a8419f8691f20ac44 \
-+    --hash=sha256:9511416e85e449fe1de73f7f99b21b3aa04fba4c4d335d30c486ba3756e3a2a6 \
-+    --hash=sha256:97199a13b772e74cdcdb03760c32109c808aff7cd49c29e9cf4b7754bb725d1d \
-+    --hash=sha256:a776bae1629c8d7198396fd93ec0265f8dd2341c553dc32b976168aaf0e6a636 \
-+    --hash=sha256:aa94d617a4cd4cdf4af9b5af65100c036bce22280ebb15d8b5262e8273ebc6ba \
-+    --hash=sha256:b17d83b3d1610e571fedac21b2eb36b816654d6f7496004d6a0d32f99d1d8120 \
-+    --hash=sha256:d73e3a96c38173e0aa5646c31bf8473bc3564837977dd480f5cbeacf1d7ef3a3 \
-+    --hash=sha256:d91bc9f535599bed58f6d2e21a2724cb0c3895bf41c6403fe881391d29096f1d \
-+    --hash=sha256:ef216d13ac8d24d9cd851776662f75f8d29c9f2d05cdcc2d34a18d32463a9b0b \
-+    --hash=sha256:f6a5a85beb33e57998dc605b9dbe7deaa806385fdf5c4810fb849fcd04640c81 \
-+    --hash=sha256:f92556f94e476c1b616e6daec5f7ddded2c082efa7cee7f31c7aeda615906ed8
++cryptography==36.0.1 \
++    --hash=sha256:0a817b961b46894c5ca8a66b599c745b9a3d9f822725221f0e0fe49dc043a3a3 \
++    --hash=sha256:2d87cdcb378d3cfed944dac30596da1968f88fb96d7fc34fdae30a99054b2e31 \
++    --hash=sha256:30ee1eb3ebe1644d1c3f183d115a8c04e4e603ed6ce8e394ed39eea4a98469ac \
++    --hash=sha256:391432971a66cfaf94b21c24ab465a4cc3e8bf4a939c1ca5c3e3a6e0abebdbcf \
++    --hash=sha256:39bdf8e70eee6b1c7b289ec6e5d84d49a6bfa11f8b8646b5b3dfe41219153316 \
++    --hash=sha256:4caa4b893d8fad33cf1964d3e51842cd78ba87401ab1d2e44556826df849a8ca \
++    --hash=sha256:53e5c1dc3d7a953de055d77bef2ff607ceef7a2aac0353b5d630ab67f7423638 \
++    --hash=sha256:596f3cd67e1b950bc372c33f1a28a0692080625592ea6392987dba7f09f17a94 \
++    --hash=sha256:5d59a9d55027a8b88fd9fd2826c4392bd487d74bf628bb9d39beecc62a644c12 \
++    --hash=sha256:6c0c021f35b421ebf5976abf2daacc47e235f8b6082d3396a2fe3ccd537ab173 \
++    --hash=sha256:73bc2d3f2444bcfeac67dd130ff2ea598ea5f20b40e36d19821b4df8c9c5037b \
++    --hash=sha256:74d6c7e80609c0f4c2434b97b80c7f8fdfaa072ca4baab7e239a15d6d70ed73a \
++    --hash=sha256:7be0eec337359c155df191d6ae00a5e8bbb63933883f4f5dffc439dac5348c3f \
++    --hash=sha256:94ae132f0e40fe48f310bba63f477f14a43116f05ddb69d6fa31e93f05848ae2 \
++    --hash=sha256:bb5829d027ff82aa872d76158919045a7c1e91fbf241aec32cb07956e9ebd3c9 \
++    --hash=sha256:ca238ceb7ba0bdf6ce88c1b74a87bffcee5afbfa1e41e173b1ceb095b39add46 \
++    --hash=sha256:ca28641954f767f9822c24e927ad894d45d5a1e501767599647259cbf030b903 \
++    --hash=sha256:e0344c14c9cb89e76eb6a060e67980c9e35b3f36691e15e1b7a9e58a0a6c6dc3 \
++    --hash=sha256:ebc15b1c22e55c4d5566e3ca4db8689470a0ca2babef8e3a9ee057a8b82ce4b1 \
++    --hash=sha256:ec63da4e7e4a5f924b90af42eddf20b698a70e58d86a72d943857c4c6045b3ee
      # via
      #   -r requirements.txt
      #   noiseprotocol
-@@ -119,25 +120,29 @@ docutils==0.17.1 \
+@@ -119,25 +119,29 @@ docutils==0.17.1 \
      #   recommonmark
      #   sphinx
      #   sphinx-rtd-theme
@@ -113,7 +112,7 @@ index 785782345..1cf6817cc 100644
      # via -r requirements.txt
  lark-parser==0.6.7 \
      --hash=sha256:062800f3823a6c733ec1d181a2089a22d1f62dbe65f90a3f6b1e6de1934b05ef
-@@ -221,9 +226,9 @@ objgraph==3.5.0 \
+@@ -221,9 +225,9 @@ objgraph==3.5.0 \
      --hash=sha256:4752ca5bcc0e0512e41b8cc4d2780ac2fd3b3eabd03b7e950a5594c06203dfc4 \
      --hash=sha256:deb821bc51a88ff103893aeeee2a8965eb0f719af2a363f49d63d894938b50b6
      # via -r requirements.txt
@@ -126,7 +125,7 @@ index 785782345..1cf6817cc 100644
      # via
      #   deprecation
      #   sphinx
-@@ -281,9 +286,9 @@ pycodestyle==2.8.0 \
+@@ -281,9 +285,9 @@ pycodestyle==2.8.0 \
      --hash=sha256:720f8b39dde8b293825e7ff02c475f3077124006db4f440dcbc9a20b76548a20 \
      --hash=sha256:eddd5847ef438ea1c7870ca7eb78a9d47ce0cdb4851a5523949f2601d0cbbe7f
      # via -r requirements.txt
@@ -139,7 +138,7 @@ index 785782345..1cf6817cc 100644
      # via cffi
  pyenchant==3.2.2 \
      --hash=sha256:1cf830c6614362a78aab78d50eaf7c6c93831369c52e1bb64ffae1df0341e637 \
-@@ -298,9 +303,9 @@ pygments==2.10.0 \
+@@ -298,9 +302,9 @@ pygments==2.10.0 \
  pympler==0.9 \
      --hash=sha256:f2cbe7df622117af890249f2dea884eb702108a12d729d264b7c5983a6e06e47
      # via -r requirements.txt
@@ -152,7 +151,7 @@ index 785782345..1cf6817cc 100644
      # via packaging
  pyrsistent==0.18.0 \
      --hash=sha256:097b96f129dd36a8c9e33594e7ebb151b1515eb52cceb08474c10a5479e799f2 \
-@@ -379,13 +384,13 @@ six==1.16.0 \
+@@ -379,13 +383,13 @@ six==1.16.0 \
      --hash=sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926 \
      --hash=sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254
      # via -r requirements.txt
@@ -172,7 +171,7 @@ index 785782345..1cf6817cc 100644
      # via
      #   -r requirements.txt
      #   recommonmark
-@@ -419,17 +424,17 @@ sphinxcontrib-serializinghtml==1.1.5 \
+@@ -419,17 +423,17 @@ sphinxcontrib-serializinghtml==1.1.5 \
      --hash=sha256:352a9a00ae864471d3a7ead8d7d79f5fc0b57e8b3f95e9867eb9eb28999b92fd \
      --hash=sha256:aa5f6de5dfdf809ef505c4895e51ef5c9eac17d0f287933eb49ec495280b6952
      # via sphinx
@@ -196,7 +195,7 @@ index 785782345..1cf6817cc 100644
      # via pep517
  urllib3==1.26.7 \
      --hash=sha256:4987c65554f7a2dbf30c18fd48778ef124af6fab771a377103da0585e2336ece \
-@@ -439,6 +444,10 @@ wheel==0.37.0 \
+@@ -439,6 +443,10 @@ wheel==0.37.0 \
      --hash=sha256:21014b2bd93c6d0034b6ba5d35e4eb284340e09d63c59aef6fc14b0f346146fd \
      --hash=sha256:e2ef7239991699e3355d54f8e968a21bb940a1dbf34a4d226741e64462516fad
      # via pip-tools
@@ -208,4 +207,4 @@ index 785782345..1cf6817cc 100644
  # WARNING: The following packages were not pinned, but pip requires them to be
  # pinned when the requirements file includes hashes. Consider using the --allow-unsafe flag.
 ```
-  - Last done at Tue Dec 14 06:35:52 UTC 2021
+  - Last done at Wed Dec 15 06:35:37 UTC 2021
