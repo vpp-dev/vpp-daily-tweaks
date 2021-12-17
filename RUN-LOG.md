@@ -1,11 +1,11 @@
-  - Started at Thu Dec 16 06:36:23 UTC 2021
+  - Started at Fri Dec 17 06:36:09 UTC 2021
     - Running tweak 000-do-test-refresh-deps...
 ```
 Found something to submit after 000-do-test-refresh-deps:
 * ayourtch-000-do-test-refresh-deps
   master
 diff --git a/test/requirements-3.txt b/test/requirements-3.txt
-index 785782345..3d6cbd6b1 100644
+index 785782345..f26579074 100644
 --- a/test/requirements-3.txt
 +++ b/test/requirements-3.txt
 @@ -72,9 +72,9 @@ cffi==1.15.0 \
@@ -106,9 +106,9 @@ index 785782345..3d6cbd6b1 100644
 -jsonschema==4.1.2 ; python_version >= "3.7" \
 -    --hash=sha256:166870c8ab27bd712a8627e0598de4685bd8d199c4d7bd7cacc3d941ba0c6ca0 \
 -    --hash=sha256:5c1a282ee6b74235057421fd0f766ac5f2972f77440927f6471c9e8493632fac
-+jsonschema==4.3.0 ; python_version >= "3.7" \
-+    --hash=sha256:ab7069946a3ad2037e79a5cdc8d0e9a74cd00721d426d75c5d69a6707c778218 \
-+    --hash=sha256:cb7f57b40f870409d7571844d0623f66d8078c90a9c255d9a4d4314b5ec3fc7c
++jsonschema==4.3.1 ; python_version >= "3.7" \
++    --hash=sha256:0070ca8dd5bf47941d1e9d8bc115a3654b1138cfb8aff44f3e3527276107314f \
++    --hash=sha256:91ffbad994d766041c6003d5f8f475cceb890c30084bd0e64847ccb1c10e48bb
      # via -r requirements.txt
  lark-parser==0.6.7 \
      --hash=sha256:062800f3823a6c733ec1d181a2089a22d1f62dbe65f90a3f6b1e6de1934b05ef
@@ -207,4 +207,4 @@ index 785782345..3d6cbd6b1 100644
  # WARNING: The following packages were not pinned, but pip requires them to be
  # pinned when the requirements file includes hashes. Consider using the --allow-unsafe flag.
 ```
-  - Last done at Thu Dec 16 06:37:00 UTC 2021
+  - Last done at Fri Dec 17 06:36:40 UTC 2021
