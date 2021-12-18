@@ -1,11 +1,11 @@
-  - Started at Fri Dec 17 06:36:09 UTC 2021
+  - Started at Sat Dec 18 06:36:33 UTC 2021
     - Running tweak 000-do-test-refresh-deps...
 ```
 Found something to submit after 000-do-test-refresh-deps:
 * ayourtch-000-do-test-refresh-deps
   master
 diff --git a/test/requirements-3.txt b/test/requirements-3.txt
-index 785782345..f26579074 100644
+index 785782345..b36f86523 100644
 --- a/test/requirements-3.txt
 +++ b/test/requirements-3.txt
 @@ -72,9 +72,9 @@ cffi==1.15.0 \
@@ -138,9 +138,15 @@ index 785782345..f26579074 100644
      # via cffi
  pyenchant==3.2.2 \
      --hash=sha256:1cf830c6614362a78aab78d50eaf7c6c93831369c52e1bb64ffae1df0341e637 \
-@@ -298,9 +302,9 @@ pygments==2.10.0 \
- pympler==0.9 \
-     --hash=sha256:f2cbe7df622117af890249f2dea884eb702108a12d729d264b7c5983a6e06e47
+@@ -295,12 +299,13 @@ pygments==2.10.0 \
+     --hash=sha256:b8e67fe6af78f492b3c4b3e2970c0624cbf08beb1e493b2c99b9fa1b67a20380 \
+     --hash=sha256:f398865f7eb6874156579fdf36bc840a03cab64d1cde9e93d68f46a425ec52c6
+     # via sphinx
+-pympler==0.9 \
+-    --hash=sha256:f2cbe7df622117af890249f2dea884eb702108a12d729d264b7c5983a6e06e47
++pympler==1.0 \
++    --hash=sha256:ca09ce58074a374a76328c27f0bb8a4e8d3964db1cbd1f9d3fd4c0d0746a9d16 \
++    --hash=sha256:f2e82c3e33835d0378ed95fffabc00806f4070f00decaa38b340ca99b1aca25c
      # via -r requirements.txt
 -pyparsing==2.4.7 \
 -    --hash=sha256:c203ec8783bf771a155b207279b9bccb8dea02d8f0c9e5f8ead507bc3246ecc1 \
@@ -151,7 +157,7 @@ index 785782345..f26579074 100644
      # via packaging
  pyrsistent==0.18.0 \
      --hash=sha256:097b96f129dd36a8c9e33594e7ebb151b1515eb52cceb08474c10a5479e799f2 \
-@@ -379,13 +383,13 @@ six==1.16.0 \
+@@ -379,13 +384,13 @@ six==1.16.0 \
      --hash=sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926 \
      --hash=sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254
      # via -r requirements.txt
@@ -171,7 +177,7 @@ index 785782345..f26579074 100644
      # via
      #   -r requirements.txt
      #   recommonmark
-@@ -419,17 +423,17 @@ sphinxcontrib-serializinghtml==1.1.5 \
+@@ -419,17 +424,17 @@ sphinxcontrib-serializinghtml==1.1.5 \
      --hash=sha256:352a9a00ae864471d3a7ead8d7d79f5fc0b57e8b3f95e9867eb9eb28999b92fd \
      --hash=sha256:aa5f6de5dfdf809ef505c4895e51ef5c9eac17d0f287933eb49ec495280b6952
      # via sphinx
@@ -195,7 +201,7 @@ index 785782345..f26579074 100644
      # via pep517
  urllib3==1.26.7 \
      --hash=sha256:4987c65554f7a2dbf30c18fd48778ef124af6fab771a377103da0585e2336ece \
-@@ -439,6 +443,10 @@ wheel==0.37.0 \
+@@ -439,6 +444,10 @@ wheel==0.37.0 \
      --hash=sha256:21014b2bd93c6d0034b6ba5d35e4eb284340e09d63c59aef6fc14b0f346146fd \
      --hash=sha256:e2ef7239991699e3355d54f8e968a21bb940a1dbf34a4d226741e64462516fad
      # via pip-tools
@@ -207,4 +213,4 @@ index 785782345..f26579074 100644
  # WARNING: The following packages were not pinned, but pip requires them to be
  # pinned when the requirements file includes hashes. Consider using the --allow-unsafe flag.
 ```
-  - Last done at Fri Dec 17 06:36:40 UTC 2021
+  - Last done at Sat Dec 18 06:37:02 UTC 2021
