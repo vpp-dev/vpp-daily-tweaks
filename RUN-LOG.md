@@ -1,11 +1,11 @@
-  - Started at Thu Dec 30 06:36:35 UTC 2021
+  - Started at Fri Dec 31 06:37:11 UTC 2021
     - Running tweak 000-do-test-refresh-deps...
 ```
 Found something to submit after 000-do-test-refresh-deps:
 * ayourtch-000-do-test-refresh-deps
   master
 diff --git a/test/requirements-3.txt b/test/requirements-3.txt
-index 785782345..437241a12 100644
+index 785782345..8efaa3ddc 100644
 --- a/test/requirements-3.txt
 +++ b/test/requirements-3.txt
 @@ -8,9 +8,9 @@ alabaster==0.7.12 \
@@ -215,9 +215,16 @@ index 785782345..437241a12 100644
      # via cffi
  pyenchant==3.2.2 \
      --hash=sha256:1cf830c6614362a78aab78d50eaf7c6c93831369c52e1bb64ffae1df0341e637 \
-@@ -295,12 +298,13 @@ pygments==2.10.0 \
-     --hash=sha256:b8e67fe6af78f492b3c4b3e2970c0624cbf08beb1e493b2c99b9fa1b67a20380 \
-     --hash=sha256:f398865f7eb6874156579fdf36bc840a03cab64d1cde9e93d68f46a425ec52c6
+@@ -291,16 +294,17 @@ pyenchant==3.2.2 \
+     --hash=sha256:5facc821ece957208a81423af7d6ec7810dad29697cb0d77aae81e4e11c8e5a6 \
+     --hash=sha256:6153f521852e23a5add923dbacfbf4bebbb8d70c4e4bad609a8e0f9faeb915d1
+     # via sphinxcontrib-spelling
+-pygments==2.10.0 \
+-    --hash=sha256:b8e67fe6af78f492b3c4b3e2970c0624cbf08beb1e493b2c99b9fa1b67a20380 \
+-    --hash=sha256:f398865f7eb6874156579fdf36bc840a03cab64d1cde9e93d68f46a425ec52c6
++pygments==2.11.0 \
++    --hash=sha256:51130f778a028f2d19c143fce00ced6f8b10f726e17599d7e91b290f6cbcda0c \
++    --hash=sha256:ac8098bfc40b8e1091ad7c13490c7f4797e401d0972e8fcfadde90ffb3ed4ea9
      # via sphinx
 -pympler==0.9 \
 -    --hash=sha256:f2cbe7df622117af890249f2dea884eb702108a12d729d264b7c5983a6e06e47
@@ -261,9 +268,9 @@ index 785782345..437241a12 100644
 -sphinxcontrib-spelling==7.2.1 \
 -    --hash=sha256:f09c1ddadf4f09ddbaef3ee210e6a18123c94fb5db5e11dfd5012208f73c35e0 \
 -    --hash=sha256:f2578653014931b32c8c30d1a9930d998ae053b0d8b7adfbea0eb95a63e7a737
-+sphinxcontrib-spelling==7.3.1 \
-+    --hash=sha256:367d02e5007cbe8689a98b7f6e4b4b0b7831589220a82a929ca2a37b11de841a \
-+    --hash=sha256:ddfa9e0081c8b2fd5948aee5490e5009c99996306e6daca462c905a6d37521d8
++sphinxcontrib-spelling==7.3.2 \
++    --hash=sha256:1b99cdb1a30271c7080ec5b968dfc243c2540a960afdc4c052cd59dfe8d94c54 \
++    --hash=sha256:9d66dc4990749c5ac52e7eaf17e82f4dc6b4aff6515d26bbf48821829d41bd02
      # via -r requirements.txt
  syslog-rfc5424-parser==0.3.2 \
      --hash=sha256:6134ee1958da89ab7f8d32ed5370a49ddabcc99d75a950b6ec59708417f20a7a \
@@ -287,12 +294,12 @@ index 785782345..437241a12 100644
 +    --hash=sha256:4bdcd7d840138086126cd09254dc6195fb4fc6f01c050a1d7236f2630db1d22a \
 +    --hash=sha256:e9a504e793efbca1b8e0e9cb979a249cf4a0a7b5b8c9e8b65a5e39d49529c1c4
      # via pip-tools
-+zipp==3.6.0 \
-+    --hash=sha256:71c644c5369f4a6e07636f0aa966270449561fcea2e3d6747b8d23efaa9d7832 \
-+    --hash=sha256:9fe5ea21568a0a70e50f273397638d39b03353731e6cbbb3fd8502a33fec40bc
++zipp==3.7.0 \
++    --hash=sha256:9f50f446828eb9d45b267433fd3e9da8d801f614129124863f9c51ebceafb87d \
++    --hash=sha256:b47250dd24f92b7dd6a0a8fc5244da14608f3ca90a5efcd37a3b1642fac9a375
 +    # via importlib-resources
  
  # WARNING: The following packages were not pinned, but pip requires them to be
  # pinned when the requirements file includes hashes. Consider using the --allow-unsafe flag.
 ```
-  - Last done at Thu Dec 30 06:37:07 UTC 2021
+  - Last done at Fri Dec 31 06:37:51 UTC 2021
