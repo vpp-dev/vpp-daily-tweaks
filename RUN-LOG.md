@@ -1,11 +1,11 @@
-  - Started at Tue Jan  4 06:36:58 UTC 2022
+  - Started at Wed Jan  5 06:37:36 UTC 2022
     - Running tweak 000-do-test-refresh-deps...
 ```
 Found something to submit after 000-do-test-refresh-deps:
 * ayourtch-000-do-test-refresh-deps
   master
 diff --git a/test/requirements-3.txt b/test/requirements-3.txt
-index 785782345..cb9ca6245 100644
+index 785782345..053d86cac 100644
 --- a/test/requirements-3.txt
 +++ b/test/requirements-3.txt
 @@ -8,9 +8,9 @@ alabaster==0.7.12 \
@@ -28,9 +28,9 @@ index 785782345..cb9ca6245 100644
 -charset-normalizer==2.0.7 \
 -    --hash=sha256:e019de665e2bcf9c2b64e2e5aa025fa991da8720daa3c1138cadd2fd1856aed0 \
 -    --hash=sha256:f7af805c321bfa1ce6714c51f254e0d5bb5e5834039bc17db7ebe3a4cec9492b
-+charset-normalizer==2.0.9 \
-+    --hash=sha256:1eecaa09422db5be9e29d7fc65664e6c33bd06f9ced7838578ba40d58bdf3721 \
-+    --hash=sha256:b0b883e8e874edfdece9c28f314e3dd5badf067342e42fb162203335ae61aa2c
++charset-normalizer==2.0.10 \
++    --hash=sha256:876d180e9d7432c5d1dfd4c5d26b72f099d503e8fcc0feb7532c9289be60fcbd \
++    --hash=sha256:cb957888737fc0bbcd78e3df769addb41fd1ff8cf950dc9e7ad7793f1bf44455
      # via requests
  click==8.0.3 \
      --hash=sha256:353f466495adaeb40b6b5f592f9f91cb22372351c84caeb068132442a4518ef3 \
@@ -315,4 +315,4 @@ index 785782345..cb9ca6245 100644
  # WARNING: The following packages were not pinned, but pip requires them to be
  # pinned when the requirements file includes hashes. Consider using the --allow-unsafe flag.
 ```
-  - Last done at Tue Jan  4 06:37:31 UTC 2022
+  - Last done at Wed Jan  5 06:38:29 UTC 2022
